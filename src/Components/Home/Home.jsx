@@ -24,7 +24,7 @@ const Home = () => {
       >
         <div className="hero-overlay bg-black bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
-          <div className="flex flex-col justify-between items-center">
+          <div className="flex justify-around items-center gap-10">
             <h1 className="mb-5 text-3xl lg:text-8xl font-bold text-white text-left">
             Real Estate Redefined!
             </h1>
