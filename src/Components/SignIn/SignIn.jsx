@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/authProvider";
 import { useNavigate } from "react-router-dom";
@@ -8,11 +8,22 @@ import "react-toastify/dist/ReactToastify.css";
 const SignIn = () => {
   const { signInUser, signInWithGoogle } = useContext(AuthContext);
   const navigate = useNavigate();
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/users")
+      .then((res) => res.json())
+      .then((data) => setUsers(data));
+  }, []);
+
 
   const handleSignIn = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
+
+    const loggingInUser = users.find(user => user.email === email)
+    console.log(loggingInUser);
 
     signInUser(email, password)
       .then((result) => {

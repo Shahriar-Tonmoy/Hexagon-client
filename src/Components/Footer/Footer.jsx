@@ -2,7 +2,11 @@ const Footer = () => {
   return (
     <footer className="footer items-center p-4 bg-neutral text-neutral-content">
       <aside className="items-center grid-flow-col">
-        <h1 className="btn btn-ghost normal-case text-3xl text-[#1B9C85]">N E E D</h1>
+      <div className="flex justify-center items-center gap-3">
+          <img src="https://i.ibb.co/C29NwnH/smooth-color-gradient-hexagon-icon-logo-vector-21165494.jpg" className="h-8" alt="" />
+          <p className="text-3xl font-bold text-white">HEXAGON</p>
+          {/* <p className="text-lg text-[#1B9C85]">Next Wheels</p> */}
+        </div>
         <p>Copyright © 2023 - All right reserved</p>
       </aside>
       <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
