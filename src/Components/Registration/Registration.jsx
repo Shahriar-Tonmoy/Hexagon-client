@@ -17,6 +17,30 @@ const Registration = () => {
         const password = e.target.password.value;
         const name = e.target.name.value;
         const photo = e.target.photourl.value;
+        const role = 'user';
+        const fraud = 'no';
+
+        const newUser = {
+          email,
+          name,
+          role,
+          fraud 
+        };
+
+        fetch(
+          "http://localhost:3000/users",
+          {
+            method: "POST",
+            headers: {
+              "content-type": "application/json",
+            },
+            body: JSON.stringify(newUser),
+          }
+        )
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+          });
 
         if(!(/[A-Z]/.test(password))){
          return toast('Password should have atleast one capital letter');

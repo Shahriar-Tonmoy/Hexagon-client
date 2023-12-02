@@ -34,7 +34,7 @@ const Nav = ({ handleToggle }) => {
   };
 
   return (
-    <div className="navbar container mx-auto bg-[#1B9C85] opacity-80 rounded-lg">
+    <div className="navbar container mx-auto bg-[#1B9C85] opacity-80 rounded-lg lg:absolute lg:left-52 ">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -74,23 +74,24 @@ const Nav = ({ handleToggle }) => {
         {user && (
           <div className="flex flex-col md:flex-row gap-7 items-center justify-center">
             
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center mr-5">
             <img
               className="rounded-full border-2 border-[#1B9C85] h-10 w-10"
               src={user.photoURL}
               alt=""
             />
-            <h1 className="text-[#1B9C85] text-xl font-semibold">
+            <h1 className="text-white text-xl font-semibold">
               {user.displayName}
             </h1>
-            
-            </div>
             <button
               onClick={handleSignOut}
-              className="text-[#1B9C85]  bg-opacity-0 hover:text-white"
+              className="text-white bg-opacity-0 hover:text-white"
             >
               Sign out
             </button>
+            
+            </div>
+            
           </div>
         )}
       </div>
