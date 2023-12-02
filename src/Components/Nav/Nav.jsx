@@ -12,18 +12,13 @@ const Nav = ({ handleToggle }) => {
           Home
         </NavLink>
 
-        <NavLink className="text-lg font-semibold" to="/addJob">
-          Add Job
+        <NavLink className="text-lg font-semibold" to="/allProperties">
+          All properties
         </NavLink>
-        <NavLink className="text-lg font-semibold" to="/myPostedJobs">
-          My Posted Jobs
+        <NavLink className="text-lg font-semibold" to="/dashboard">
+        Dashboard
         </NavLink>
-        <NavLink className="text-lg font-semibold" to="/myBids">
-          My Bids
-        </NavLink>
-        <NavLink className="text-lg font-semibold" to="/bidRequests">
-          Bid Requests
-        </NavLink>
+        
 
         {!user && (
           <NavLink className="text-lg font-semibold" to="/SignIn">
@@ -39,7 +34,7 @@ const Nav = ({ handleToggle }) => {
   };
 
   return (
-    <div className="navbar container mx-auto w-full">
+    <div className="navbar container mx-auto bg-[#1B9C85] opacity-80 rounded-lg">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -67,7 +62,7 @@ const Nav = ({ handleToggle }) => {
         </div>
         <div className="flex justify-center items-center gap-3">
           <img src="https://i.ibb.co/C29NwnH/smooth-color-gradient-hexagon-icon-logo-vector-21165494.jpg" className="h-8" alt="" />
-          <p className="text-3xl font-bold text-[#1B9C85]">HEXAGON</p>
+          <p className="text-3xl font-bold text-white">HEXAGON</p>
           {/* <p className="text-lg text-[#1B9C85]">Next Wheels</p> */}
         </div>
       </div>

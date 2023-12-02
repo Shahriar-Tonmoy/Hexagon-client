@@ -8,7 +8,7 @@ import Email from "../Email/Email";
 
 const Home = () => {
   useEffect(() => {
-    document.title = 'N E E D | Home'; 
+    document.title = 'Hexagon | Home'; 
   }, []);
 
   useEffect(() => {
@@ -17,20 +17,19 @@ const Home = () => {
   return (
     <div>
       <div
-        className="hero h-[400px] md:h-[600px]"
+        className="hero h-[400px] md:h-[600px] bg-fixed"
         style={{
-          backgroundImage: "url('https://i.ibb.co/6XYmz38/Banner.jpg')",
+          backgroundImage: "url('https://i.ibb.co/SX7cTfg/1-a.webp')",
         }}
       >
         <div className="hero-overlay bg-black bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="flex flex-col justify-between items-center">
             <h1 className="mb-5 text-3xl lg:text-8xl font-bold text-white text-left">
-              <span className="text-[#1B9C85]">N E E D</span>, Where
-              Opportunities Meet Talent
+            Real Estate Redefined!
             </h1>
             <p className="hidden md:block text-white text-xl text-left">
-            Welcome to <span className="text-[#1B9C85]">N E E D</span>, the dynamic platform where job seekers and employers unite in a vibrant marketplace! Explore endless opportunities as you seamlessly navigate through a world of job postings and bids. Whether you're a professional looking for your next challenge or a company seeking top talent, our innovative hub connects dreams with reality. Bid, Post, and Thrive - your journey to career excellence begins here!
+            Welcome to <span className="text-[#1B9C85]">Hexagon</span>, your premier destination for seamless real estate transactions. Whether you're buying your dream home or selling a property, we provide a one-stop platform to streamline the process. Explore our extensive listings, connect with motivated buyers and sellers, and experience a new era of hassle-free real estate transactions. Your journey to homeownership and investment success begins here. Discover, transact, and thrive with <span className="text-[#1B9C85]">Hexagon</span>.
             </p>
           </div>
         </div>
