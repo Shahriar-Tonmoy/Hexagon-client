@@ -53,8 +53,8 @@ const Update = () => {
         <ToastContainer></ToastContainer>
       <div className="hero-content flex-col lg:flex-row-reverse w-full">
         <div className="text-center lg:text-left"></div>
-        <div className="card flex-shrink-0 w-full  shadow-2xl border border-[#59CE8F] bg-base-100 py-20 px-5">
-          <h1 className="text-[#59CE8F] text-center text-3xl font-bold">
+        <div className="card flex-shrink-0 w-full  shadow-2xl border border-[#1B9C85] bg-base-100 py-20 px-5">
+          <h1 className="text-[#1B9C85] text-center text-3xl font-bold">
             Update Your Posted Job
           </h1>
           <form className="card-body" onSubmit={handleUpdateJob} >
@@ -152,7 +152,7 @@ const Update = () => {
               </div>
             </div>
             <div className="form-control mt-6">
-              <button className="btn bg-opacity-0 border-[#59CE8F] hover:bg-opacity-0 hover:border-green-400 w-[30%] mx-auto">
+              <button className="btn bg-opacity-0 border-[#1B9C85] hover:bg-opacity-0 hover:border-green-400 w-[30%] mx-auto">
                 Update
               </button>
             </div>

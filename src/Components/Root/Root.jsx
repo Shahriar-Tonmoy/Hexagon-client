@@ -17,7 +17,7 @@ const Root = () => {
         }
       }
     return (
-           <div data-theme='dark'>
+           <div data-theme='light'>
            <Nav handleToggle={handleToggle}></Nav>
            <Outlet></Outlet>
            <Footer ></Footer>

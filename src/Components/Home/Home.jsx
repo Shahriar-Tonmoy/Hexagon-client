@@ -26,11 +26,11 @@ const Home = () => {
         <div className="hero-content text-center text-neutral-content">
           <div className="flex flex-col justify-between items-center">
             <h1 className="mb-5 text-3xl lg:text-8xl font-bold text-white text-left">
-              <span className="text-[#59CE8F]">N E E D</span>, Where
+              <span className="text-[#1B9C85]">N E E D</span>, Where
               Opportunities Meet Talent
             </h1>
             <p className="hidden md:block text-white text-xl text-left">
-            Welcome to <span className="text-[#59CE8F]">N E E D</span>, the dynamic platform where job seekers and employers unite in a vibrant marketplace! Explore endless opportunities as you seamlessly navigate through a world of job postings and bids. Whether you're a professional looking for your next challenge or a company seeking top talent, our innovative hub connects dreams with reality. Bid, Post, and Thrive - your journey to career excellence begins here!
+            Welcome to <span className="text-[#1B9C85]">N E E D</span>, the dynamic platform where job seekers and employers unite in a vibrant marketplace! Explore endless opportunities as you seamlessly navigate through a world of job postings and bids. Whether you're a professional looking for your next challenge or a company seeking top talent, our innovative hub connects dreams with reality. Bid, Post, and Thrive - your journey to career excellence begins here!
             </p>
           </div>
         </div>
@@ -44,7 +44,7 @@ const Home = () => {
         data-aos-offset="300"
         data-aos-easing="ease-in-sine"
       >
-        <h1 className="text-center text-5xl font-bold mb-16 text-[#59CE8F]">
+        <h1 className="text-center text-5xl font-bold mb-16 text-[#1B9C85]">
           Most Asked Questions
         </h1>
         <FAQ></FAQ>

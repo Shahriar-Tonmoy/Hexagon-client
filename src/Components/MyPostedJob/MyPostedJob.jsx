@@ -18,16 +18,16 @@ const MyPostedJob = ({ job, handleDelete }) => {
           <img src={imageURL} alt="Shoes" />
         </figure>
         <div className="card-body">
-          <h2 className="card-title text-[#59CE8F]">{title}</h2>
+          <h2 className="card-title text-[#1B9C85]">{title}</h2>
           <p>{description}</p>
           <div className=" justify-center">
             <Link to={`/update/${_id}`}>
-              <button className="btn border border-[#59CE8F] hover:bg-[#59CE8F] text-white mx-auto mr-4">
+              <button className="btn border border-[#1B9C85] hover:bg-[#1B9C85] text-white mx-auto mr-4">
                 Update
               </button>
             </Link>
             
-            <button onClick={()=>handleDelete(_id)} className="btn border border-[#59CE8F] hover:bg-[#59CE8F] text-white mx-auto">
+            <button onClick={()=>handleDelete(_id)} className="btn border border-[#1B9C85] hover:bg-[#1B9C85] text-white mx-auto">
               Delete
             </button>
           </div>

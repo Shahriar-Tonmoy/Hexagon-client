@@ -65,9 +65,10 @@ const Nav = ({ handleToggle }) => {
             {navLinks}
           </ul>
         </div>
-        <div className="flex flex-col items-center">
-          <p className="text-3xl font-bold text-[#59CE8F]">N E E D</p>
-          {/* <p className="text-lg text-[#59CE8F]">Next Wheels</p> */}
+        <div className="flex justify-center items-center gap-3">
+          <img src="https://i.ibb.co/C29NwnH/smooth-color-gradient-hexagon-icon-logo-vector-21165494.jpg" className="h-8" alt="" />
+          <p className="text-3xl font-bold text-[#1B9C85]">HEXAGON</p>
+          {/* <p className="text-lg text-[#1B9C85]">Next Wheels</p> */}
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -80,18 +81,18 @@ const Nav = ({ handleToggle }) => {
             
             <div className="flex flex-col items-center">
             <img
-              className="rounded-full border-2 border-[#59CE8F] h-10 w-10"
+              className="rounded-full border-2 border-[#1B9C85] h-10 w-10"
               src={user.photoURL}
               alt=""
             />
-            <h1 className="text-[#59CE8F] text-xl font-semibold">
+            <h1 className="text-[#1B9C85] text-xl font-semibold">
               {user.displayName}
             </h1>
             
             </div>
             <button
               onClick={handleSignOut}
-              className="text-[#59CE8F]  bg-opacity-0 hover:text-white"
+              className="text-[#1B9C85]  bg-opacity-0 hover:text-white"
             >
               Sign out
             </button>

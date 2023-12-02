@@ -2,7 +2,7 @@ const FAQ = () => {
   return (
     <div>
       <div>
-        <div className="collapse collapse-arrow bg-[#59CE8F]">
+        <div className="collapse collapse-arrow bg-[#1B9C85]">
           <input type="radio" name="my-accordion-2" checked="checked" />
           <div className="collapse-title text-xl font-medium text-white">
           How can I list services on the marketplace?
@@ -13,7 +13,7 @@ const FAQ = () => {
             </p>
           </div>
         </div>
-        <div className="collapse collapse-arrow border-2 border-[#59CE8F]">
+        <div className="collapse collapse-arrow border-2 border-[#1B9C85]">
           <input type="radio" name="my-accordion-2" />
           <div className="collapse-title text-xl font-medium">
           How does the payment process work for transactions on the marketplace?
@@ -24,7 +24,7 @@ const FAQ = () => {
             </p>
           </div>
         </div>
-        <div className="collapse collapse-arrow bg-[#59CE8F]">
+        <div className="collapse collapse-arrow bg-[#1B9C85]">
           <input type="radio" name="my-accordion-2" />
           <div className="collapse-title text-xl font-medium text-white">
           What measures are in place to ensure the safety and reliability of transactions?

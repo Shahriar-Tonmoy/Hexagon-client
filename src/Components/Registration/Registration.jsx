@@ -44,13 +44,13 @@ const Registration = () => {
             })      
     }
   return (
-    <div className="hero min-h-screen bg-base-200">
+    <div className="hero min-h-screen bg-base-200 bg-gradient-to-r from-[#1B9C85] to-green-400">
         <ToastContainer></ToastContainer>
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="text-center lg:text-left">
         </div>
         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 py-20 px-5">
-        <h1 className="text-[#59CE8F] text-3xl font-bold text-center">Registration</h1>
+        <h1 className="text-[#1B9C85] text-3xl font-bold text-center">Registration</h1>
           <form onSubmit={handleSignUp} className="card-body">
           <div className="form-control">
               <label className="label">
@@ -100,10 +100,10 @@ const Registration = () => {
               />
             </div>
             <div className="form-control mt-6">
-              <button className="btn bg-opacity-0 border-[#59CE8F] hover:bg-opacity-0 hover:border-green-200">Sign up</button>
+              <button className="btn bg-opacity-0 border-[#1B9C85] hover:bg-opacity-0 hover:border-green-200">Sign up</button>
             </div>
           </form>
-          <p className="text-center">Already have an account? <Link className="text-[#59CE8F] underline" to="/SignIn">Sign In</Link> here</p>
+          <p className="text-center">Already have an account? <Link className="text-[#1B9C85] underline" to="/SignIn">Sign In</Link> here</p>
         </div>
       </div>
     </div>

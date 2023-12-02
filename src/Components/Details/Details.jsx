@@ -74,16 +74,16 @@ const Details = () => {
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-col">
           <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold text-[#59CE8F]">{title}</h1>
+            <h1 className="text-5xl font-bold text-[#1B9C85]">{title}</h1>
             <p className="py-6">
               {description}
             </p>
-            <p className="text-[#59CE8F] text-xl">Deadline: {deadline}</p>
-            <p className="text-[#59CE8F] text-xl">{minimumPrice} - {maximumPrice}</p>
+            <p className="text-[#1B9C85] text-xl">Deadline: {deadline}</p>
+            <p className="text-[#1B9C85] text-xl">{minimumPrice} - {maximumPrice}</p>
           </div>
 
-          <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 border border-[#59CE8F]">
-            <h1 className="text-[#59CE8F] text-5xl font-extrabold text-center mt-8">Place Your Bid</h1>
+          <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 border border-[#1B9C85]">
+            <h1 className="text-[#1B9C85] text-5xl font-extrabold text-center mt-8">Place Your Bid</h1>
             <form className="card-body" onSubmit={handleBidJob}>
               <div className="form-control">
                 <label className="label">
@@ -137,7 +137,7 @@ const Details = () => {
                 />
               </div>
               <div className="form-control mt-6">
-                <button className={`btn border-[#59CE8F] text-white hover:bg-[#59CE8F]`} disabled={(user.email === email || Date.now() >= Time) ? true : false} >Bid on this project</button>
+                <button className={`btn border-[#1B9C85] text-white hover:bg-[#1B9C85]`} disabled={(user.email === email || Date.now() >= Time) ? true : false} >Bid on this project</button>
                 {/*  */}
               </div>
             </form>

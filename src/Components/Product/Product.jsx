@@ -12,14 +12,14 @@ const Product = ({ product }) => {
         />
       </figure>
       <div className="card-body">
-        <h2 className="card-title text-[#59CE8F]">{name}- {brandName}</h2>
+        <h2 className="card-title text-[#1B9C85]">{name}- {brandName}</h2>
         <p>{shortDescription}</p>
         <p className="font-semibold">Type - {type}</p>
         <p className="font-semibold">Price - {price}</p>
         <p className="font-semibold">Rating - {rating}</p>
         <div className="card-actions justify-end">
-          <Link to={`/details/${_id}`}><button className="btn bg-[#59CE8F] text-white hover:bg-orange-500">Details</button></Link>
-          <Link to={`/update/${_id}`}><button className="btn bg-[#59CE8F] text-white hover:bg-orange-500">Update</button></Link>
+          <Link to={`/details/${_id}`}><button className="btn bg-[#1B9C85] text-white hover:bg-orange-500">Details</button></Link>
+          <Link to={`/update/${_id}`}><button className="btn bg-[#1B9C85] text-white hover:bg-orange-500">Update</button></Link>
         </div>
       </div>
     </div>

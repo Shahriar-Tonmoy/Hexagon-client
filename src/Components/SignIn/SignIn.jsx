@@ -42,12 +42,15 @@ const SignIn = () => {
       .catch((error) => console.log(error.message));
   };
   return (
-    <div className="hero min-h-screen bg-base-200">
+    <div className="flex justify-center items-center">
+      
+      <div className="hero min-h-screen bg-base-200 bg-gradient-to-r from-[#1B9C85] to-green-400 ">
+      
       <ToastContainer></ToastContainer>
-      <div className="hero-content flex-col lg:flex-row-reverse">
+      <div className="hero-content flex-col lg:flex-row-reverse ">
         <div className="text-center lg:text-left"></div>
-        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl border border-[#59CE8F] bg-base-100 py-20 px-5">
-          <h1 className="text-[#59CE8F] text-center text-3xl font-bold">
+        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl border border-[#1B9C85] bg-base-100 py-20 px-5">
+          <h1 className="text-[#1B9C85] text-center text-3xl font-bold">
             Sign in
           </h1>
           <form onSubmit={handleSignIn} className="card-body">
@@ -76,7 +79,7 @@ const SignIn = () => {
               />
             </div>
             <div className="form-control mt-6">
-              <button className="btn bg-opacity-0 border-[#59CE8F] hover:bg-opacity-0 hover:border-green-200">
+              <button className="btn bg-opacity-0 border-[#1B9C85] hover:bg-opacity-0 hover:border-green-200">
                 Sign in
               </button>
             </div>
@@ -84,7 +87,7 @@ const SignIn = () => {
           <div className="text-center">
             <p>
               New here?{" "}
-              <Link className="text-[#59CE8F] underline" to="/registration">
+              <Link className="text-[#1B9C85] underline" to="/registration">
                 Sign Up
               </Link>
             </p>
@@ -102,6 +105,7 @@ const SignIn = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

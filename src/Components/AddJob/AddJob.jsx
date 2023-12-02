@@ -61,8 +61,8 @@ const AddJob = () => {
       <div className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row-reverse w-full">
         <div className="text-center lg:text-left"></div>
-        <div className="card flex-shrink-0 w-full  shadow-2xl border border-[#59CE8F] bg-base-100 py-20 px-5">
-          <h1 className="text-[#59CE8F] text-center text-3xl font-bold">
+        <div className="card flex-shrink-0 w-full  shadow-2xl border border-[#1B9C85] bg-base-100 py-20 px-5">
+          <h1 className="text-[#1B9C85] text-center text-3xl font-bold">
             Post a Job
           </h1>
           <form className="card-body" onSubmit={handleNewProduct}>
@@ -164,7 +164,7 @@ const AddJob = () => {
               </div>
             </div>
             <div className="form-control mt-6">
-              <button className="btn bg-opacity-0 border-[#59CE8F] hover:bg-opacity-0 hover:border-orange-200 w-[20%] mx-auto">
+              <button className="btn bg-opacity-0 border-[#1B9C85] hover:bg-opacity-0 hover:border-orange-200 w-[20%] mx-auto">
                 Post
               </button>
             </div>

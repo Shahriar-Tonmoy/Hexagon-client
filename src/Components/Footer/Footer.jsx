@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <footer className="footer items-center p-4 bg-neutral text-neutral-content">
       <aside className="items-center grid-flow-col">
-        <h1 className="btn btn-ghost normal-case text-3xl text-[#59CE8F]">N E E D</h1>
+        <h1 className="btn btn-ghost normal-case text-3xl text-[#1B9C85]">N E E D</h1>
         <p>Copyright © 2023 - All right reserved</p>
       </aside>
       <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
