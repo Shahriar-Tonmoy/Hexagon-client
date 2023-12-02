@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/authProvider";
 import AgentDashboard from "../AgentDashboard/AgentDashboard";
+import AdminDashboard from "../AdminDashboard/AdminDashboard";
 
 const Dashboard = () => {
 
@@ -30,7 +31,8 @@ const Dashboard = () => {
                 <AgentDashboard currentUser={currentUser}></AgentDashboard>)
             }
             {
-                (role === 'admin' && adminDashBoard)
+                (role === 'admin' && 
+                <AdminDashboard currentUser={currentUser}></AdminDashboard>)
             }
             {
                 (role === 'user' && userDashBoard)
