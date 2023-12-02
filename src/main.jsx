@@ -19,6 +19,7 @@ import MyBids from "./Components/MyBids/MyBids.jsx";
 import MyPostedJobs from "./Components/MyPostedJobs/MyPostedJobs.jsx";
 import BidRequests from "./Components/BidRequests/BidRequests.jsx";
 import AddJob from "./Components/AddJob/AddJob.jsx";
+import Dashboard from "./Components/Dashboard/Dashboard.jsx";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path:"addJob",
         element:<PrivateRoute><AddJob></AddJob></PrivateRoute>
+      },
+      {
+        path:"dashboard",
+        element:<PrivateRoute><Dashboard></Dashboard></PrivateRoute>
       },
       {
         path:"/details/:id",

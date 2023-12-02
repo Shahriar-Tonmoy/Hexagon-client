@@ -34,7 +34,7 @@ const Nav = ({ handleToggle }) => {
   };
 
   return (
-    <div className="navbar container mx-auto bg-[#1B9C85] opacity-80 rounded-lg lg:absolute lg:left-52 ">
+    <div className="navbar container mx-auto bg-[#1B9C85] opacity-80 rounded-lg  ">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
