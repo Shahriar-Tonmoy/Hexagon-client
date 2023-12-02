@@ -26,7 +26,7 @@ const SignIn = () => {
       })
       .catch((error) => {
         console.log(error.code);
-        if(error.code == 'auth/invalid-login-credentials')
+        if(error.code == 'auth/invalid-credential')
           toast("Invalid Email or Password");
       });
   };
@@ -42,10 +42,8 @@ const SignIn = () => {
       .catch((error) => console.log(error.message));
   };
   return (
-    <div className="flex justify-center items-center">
       
-      <div className="hero min-h-screen bg-base-200 bg-gradient-to-r from-[#1B9C85] to-green-400 ">
-      
+      <div className="hero min-h-screen bg-base-200 bg-gradient-to-r from-[#1B9C85] to-green-400 ">  
       <ToastContainer></ToastContainer>
       <div className="hero-content flex-col lg:flex-row-reverse ">
         <div className="text-center lg:text-left"></div>
@@ -106,7 +104,7 @@ const SignIn = () => {
         </div>
       </div>
     </div>
-    </div>
+
   );
 };
 
