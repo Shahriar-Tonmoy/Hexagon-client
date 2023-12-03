@@ -83,7 +83,7 @@ const ManageProperties = () => {
                 <td>{property.priceRange}</td>
                 <td className="">
                     {
-                        (property.status !== 'pending') && property.status
+                        (property.status !== 'pending') && <p className={`${(property.status === 'verified') ? 'text-green-600' : 'text-red-600'}`}>{property.status}</p>
                     }
                   <button
                     onClick={() => handleUpdateStatusAccepted(property._id)}
