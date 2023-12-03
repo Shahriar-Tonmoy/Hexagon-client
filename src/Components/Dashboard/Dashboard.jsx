@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/authProvider";
 import AgentDashboard from "../AgentDashboard/AgentDashboard";
 import AdminDashboard from "../AdminDashboard/AdminDashboard";
+import UserDashboard from "../UserDashboard/UserDashboard";
 
 const Dashboard = () => {
 
@@ -35,7 +36,7 @@ const Dashboard = () => {
                 <AdminDashboard currentUser={currentUser}></AdminDashboard>)
             }
             {
-                (role === 'user' && userDashBoard)
+                (role === 'user' && <UserDashboard currentUser={currentUser}></UserDashboard>)
             }
         </div>
     );
