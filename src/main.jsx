@@ -22,6 +22,7 @@ import AddProperty from "./Components/AddProperty/AddProperty.jsx";
 import Dashboard from "./Components/Dashboard/Dashboard.jsx";
 import Profile from "./Components/Profile/Profile.jsx";
 import MyAddedProperties from "./Components/MyAddedProperties/MyAddedProperties.jsx";
+import ManageProperties from "./Components/ManageProperties/manageProperties.jsx";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path:"addProperty",
         element:<PrivateRoute><AddProperty></AddProperty></PrivateRoute>
+      },
+      {
+        path:"/manageProperties",
+        element:<PrivateRoute><ManageProperties></ManageProperties></PrivateRoute>
       },
       {
         path:"/myAddedProperties",
