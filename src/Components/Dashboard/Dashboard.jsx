@@ -18,13 +18,8 @@ const Dashboard = () => {
   }, []);
 
   const currentUser = users.find(user => user.email === userEmail)
-    console.log(currentUser?.role);
+    console.log(currentUser?.photo);
     const role = currentUser?.role;
-    const agentDashBoard = <div>
-                                <div></div>
-                            </div>
-    const adminDashBoard = <div><h1>Admin Dashboard</h1></div>
-    const userDashBoard = <div><h1>User Dashboard</h1></div>
     return (
         <div className="min-h-screen">
             {

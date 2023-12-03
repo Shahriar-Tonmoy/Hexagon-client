@@ -20,6 +20,7 @@ import MyPostedJobs from "./Components/MyPostedJobs/MyPostedJobs.jsx";
 import BidRequests from "./Components/BidRequests/BidRequests.jsx";
 import AddJob from "./Components/AddJob/AddJob.jsx";
 import Dashboard from "./Components/Dashboard/Dashboard.jsx";
+import Profile from "./Components/Profile/Profile.jsx";
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,12 @@ const router = createBrowserRouter([
         path:"/details/:id",
         element:<PrivateRoute><Details></Details></PrivateRoute>,
         loader: ()=>fetch('https://need-server.vercel.app/jobs')
+
+      },
+      {
+        path:"/profile/:id",
+        element:<PrivateRoute><Profile></Profile></PrivateRoute>,
+        loader: ()=>fetch('http://localhost:3000/users')
 
       },
       {

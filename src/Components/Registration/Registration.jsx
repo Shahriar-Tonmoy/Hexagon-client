@@ -24,7 +24,8 @@ const Registration = () => {
           email,
           name,
           role,
-          fraud 
+          fraud,
+          photo 
         };
 
         fetch(
