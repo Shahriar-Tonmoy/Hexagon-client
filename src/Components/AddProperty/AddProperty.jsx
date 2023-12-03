@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 
 
+
 const AddProperty = () => {
   const { user, signOutUser } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -14,7 +15,7 @@ const AddProperty = () => {
 
 
 
- 
+  console.log(user.photoURL);
 
 
   const handleNewProduct = async (e) => {
@@ -28,7 +29,8 @@ const AddProperty = () => {
     const priceRange = form.priceRange.value;
     const image = form.image.value;
     const status = 'pending';
-    console.log(image);
+    const agentImage = user.photoURL;
+    console.log(agentImage);
     
     const newProperty = {
       title,
@@ -38,6 +40,7 @@ const AddProperty = () => {
       priceRange,
       image,
       status,
+      agentImage
     };
     form.reset();
     fetch("http://localhost:3000/properties", {
