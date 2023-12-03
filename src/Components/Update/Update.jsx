@@ -6,37 +6,37 @@ import { AuthContext } from "../../AuthProvider/authProvider";
 
 const Update = () => {
 
-    const loadedJob = useLoaderData();
+    const loadedProperty = useLoaderData();
     const { user, signOutUser } = useContext(AuthContext);
     const {
       _id,
-      email,
       title,
-      deadline,
-      description,
-      minimumPrice,
-      maximumPrice,
-      category,
-      imageURL,
-    } = loadedJob;
-    const handleUpdateJob = e =>{
+      location,
+      agentName,
+      agentEmail,
+      priceRange,
+      image,
+      status,
+      agentImage
+    } = loadedProperty;
+
+    const handleUpdateProperty = e =>{
         e.preventDefault();
         const form  = e.target;
-        const fEmail = form.email.value;
-        const fJobTitle = form.title.value;
-        const fDeadline = form.deadline.value;
-        const fDescription = form.description.value;
-        const fMinimumPrice = form.minimumPrice.value;
-        const fMaximumPrice = form.maximumPrice.value;
-        const fCategory = form.category.value;
-        const updatedJob = {fEmail, fJobTitle, fDescription, fDeadline, fMinimumPrice, fMaximumPrice, fCategory};
+        const fImage = form.image.value;
+        const fPropertyTitle = form.title.value;
+        const fLocation = form.location.value;
+        const fAgentName = form.agentName.value;
+        const fAgentEmail = form.agentEmail.value;
+        const fPriceRange = form.priceRange.value;
+        const updatedProperty = {fImage, fPropertyTitle, fLocation, fAgentName, fAgentEmail, fPriceRange};
         
-        fetch(`https://need-server.vercel.app/jobs/${_id}`,{
+        fetch(`http://localhost:3000/properties/${_id}`,{
             method:'PUT',
             headers:{
                 'content-type': "application/json"
             },
-            body: JSON.stringify(updatedJob)
+            body: JSON.stringify(updatedProperty)
         })
             .then(res => res.json())
             .then(data => {
@@ -55,30 +55,30 @@ const Update = () => {
         <div className="text-center lg:text-left"></div>
         <div className="card flex-shrink-0 w-full  shadow-2xl border border-[#1B9C85] bg-base-100 py-20 px-5">
           <h1 className="text-[#1B9C85] text-center text-3xl font-bold">
-            Update Your Posted Job
+            Update Your Added Property
           </h1>
-          <form className="card-body" onSubmit={handleUpdateJob} >
+          <form className="card-body" onSubmit={handleUpdateProperty} >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Email</span>
+                  <span className="label-text">Property Image</span>
                 </label>
                 <input
-                  type="email"
-                  defaultValue={user.email}
+                  type="text"
+                  placeholder="Image URL"
+                  defaultValue={image}
                   className="input input-bordered"
-                  name="email"
-                  readOnly
+                  name="image"
                   required
                 />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Job Title</span>
+                  <span className="label-text">Property Title</span>
                 </label>
                 <input
                   type="text"
-                  placeholder="Image URL"
+                  placeholder="Title"
                   className="input input-bordered"
                   name="title"
                   defaultValue={title}
@@ -87,72 +87,61 @@ const Update = () => {
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Deadline</span>
+                  <span className="label-text">Property Location</span>
                 </label>
                 <input
                   type="text"
-                  placeholder="Brand Name"
+                  placeholder="Property Location"
                   className="input input-bordered"
-                  name="deadline"
-                  defaultValue={deadline}
+                  name="location"
+                  defaultValue={location}
                   required
                 />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Description</span>
+                  <span className="label-text">Agent Name</span>
                 </label>
                 <input
                   type="text"
-                  placeholder="Type"
+                  placeholder="Agent name"
                   className="input input-bordered"
-                  name="description"
-                  defaultValue={description}
+                  name="agentName"
+                  defaultValue={agentName}
                   required
+                  readOnly
                 />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Category</span>
+                  <span className="label-text">Agent Email</span>
                 </label>
                 <input
                   type="text"
-                  placeholder="Price"
+                  placeholder="Agent email"
                   className="input input-bordered"
-                  name="category"
-                  defaultValue={category}
+                  name="agentEmail"
+                  defaultValue={agentEmail}
                   required
+                  readOnly
                 />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Minimum price</span>
+                  <span className="label-text">Price Range</span>
                 </label>
                 <input
                   type="text"
                   placeholder="Short description"
                   className="input input-bordered"
-                  name="minimumPrice"
-                  defaultValue={minimumPrice}
-                  required
-                />
-              </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Maximum Price</span>
-                </label>
-                <input
-                  type="type"
-                  placeholder="Rating"
-                  className="input input-bordered"
-                  name="maximumPrice"
-                  defaultValue={maximumPrice}
+                  name="priceRange"
+                  defaultValue={priceRange}
                   required
                 />
               </div>
             </div>
             <div className="form-control mt-6">
-              <button className="btn bg-opacity-0 border-[#1B9C85] hover:bg-opacity-0 hover:border-green-400 w-[30%] mx-auto">
+              <button  className="btn bg-opacity-0 border-[#1B9C85] hover:bg-opacity-0 hover:border-green-400 w-[30%] mx-auto">
                 Update
               </button>
             </div>

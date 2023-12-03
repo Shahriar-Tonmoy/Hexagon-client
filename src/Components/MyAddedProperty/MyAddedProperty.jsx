@@ -31,7 +31,7 @@ const MyAddedProperty = ({ property, handleDelete }) => {
         <p className="font-semibold">Price range - <span className="text-[#1B9C85]">{priceRange}</span></p>
         <div className="card-actions justify-start">
           <Link ><button onClick={() =>{handleDelete(_id)}} className="btn bg-[#1B9C85] text-white hover:bg-green-500">Delete</button></Link>
-          <Link to={`/update/${_id}`}><button className="btn bg-[#1B9C85] text-white hover:bg-green-500">Update</button></Link>
+          <Link to={`/update/${_id}`}><button className={`btn bg-[#1B9C85] text-white hover:bg-green-500 ${status==='rejected' ? 'hidden' : 'block'}`} >Update</button></Link>
         </div>
       </div>
     </div>
