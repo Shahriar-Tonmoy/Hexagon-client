@@ -66,7 +66,7 @@ const router = createBrowserRouter([
       {
         path:"/details/:id",
         element:<PrivateRoute><Details></Details></PrivateRoute>,
-        loader: ()=>fetch('https://need-server.vercel.app/jobs')
+        loader: ()=>fetch('http://localhost:3000/properties')
 
       },
       {
