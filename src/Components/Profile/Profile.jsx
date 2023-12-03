@@ -14,8 +14,8 @@ const Profile = () => {
           />
           <div>
             <h1 className="text-5xl font-bold"><span className="text-[#1B9C85] text-7xl font-semibold">Name:</span> {selectedUser?.name}</h1>
-            <p className="py-6 text-5xl font-bold">
-            <span className="text-[#1B9C85] text-7xl font-semibold">Role:</span> {selectedUser?.role}
+            <p className={`py-6 text-5xl font-bold ${(selectedUser?.role === 'user') && 'hidden' }`}>
+            <span className={`text-[#1B9C85] text-7xl font-semibold`}>Role:</span> {selectedUser?.role}
             </p>
           </div>
         </div>

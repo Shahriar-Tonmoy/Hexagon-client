@@ -10,7 +10,7 @@ import SignIn from "./Components/SignIn/SignIn.jsx";
 import Home from "./Components/Home/Home.jsx";
 import PrivateRoute from "./Routes/PrivateRoute.jsx";
 import Error from "./Components/Error/Error.jsx";
-import AddProduct from "./Components/AddJob/AddJob.jsx";
+import AddProduct from "./Components/AddProperty/AddProperty.jsx";
 import MyCart from "./Components/MyCart/MyCart.jsx";
 import Products from "./Components/Products/Products.jsx";
 import Details from "./Components/Details/Details.jsx";
@@ -18,9 +18,10 @@ import Update from "./Components/Update/Update.jsx";
 import MyBids from "./Components/MyBids/MyBids.jsx";
 import MyPostedJobs from "./Components/MyPostedJobs/MyPostedJobs.jsx";
 import BidRequests from "./Components/BidRequests/BidRequests.jsx";
-import AddJob from "./Components/AddJob/AddJob.jsx";
+import AddProperty from "./Components/AddProperty/AddProperty.jsx";
 import Dashboard from "./Components/Dashboard/Dashboard.jsx";
 import Profile from "./Components/Profile/Profile.jsx";
+import MyAddedProperties from "./Components/MyAddedProperties/MyAddedProperties.jsx";
 
 const router = createBrowserRouter([
   {
@@ -41,8 +42,12 @@ const router = createBrowserRouter([
         element: <SignIn></SignIn>,
       },
       {
-        path:"addJob",
-        element:<PrivateRoute><AddJob></AddJob></PrivateRoute>
+        path:"addProperty",
+        element:<PrivateRoute><AddProperty></AddProperty></PrivateRoute>
+      },
+      {
+        path:"/myAddedProperties",
+        element:<PrivateRoute><MyAddedProperties></MyAddedProperties></PrivateRoute>
       },
       {
         path:"dashboard",

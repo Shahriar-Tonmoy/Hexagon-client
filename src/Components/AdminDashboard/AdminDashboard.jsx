@@ -1,7 +1,10 @@
+import { Link } from "react-router-dom";
+
 const AdminDashboard = ({ currentUser }) => {
   return (
     <div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 container mx-auto mt-44">
+      <Link to={`/profile/${currentUser._id}`}>
         <div className="card w-72 bg-base-100 shadow-xl image-full h-full">
           <figure className="rounded">
             <img src="https://i.ibb.co/jLKhF2r/pngwing-com.png" alt="Shoes" />
@@ -13,6 +16,7 @@ const AdminDashboard = ({ currentUser }) => {
             <p>{currentUser?.name}</p>
           </div>
         </div>
+        </Link>
         <div className="card w-72 bg-base-100 shadow-xl image-full ">
           <figure className="rounded">
             <img src="https://i.ibb.co/3m7ttFq/pngwing-com-1.png" alt="Shoes" />
