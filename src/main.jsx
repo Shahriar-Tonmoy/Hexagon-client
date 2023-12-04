@@ -24,6 +24,7 @@ import Profile from "./Components/Profile/Profile.jsx";
 import MyAddedProperties from "./Components/MyAddedProperties/MyAddedProperties.jsx";
 import ManageProperties from "./Components/ManageProperties/manageProperties.jsx";
 import AllProperties from "./Components/AllProperties/AllProperties.jsx";
+import Wishlist from "./Components/Wishlist/Wishlist.jsx";
 
 const router = createBrowserRouter([
   {
@@ -76,8 +77,8 @@ const router = createBrowserRouter([
 
       },
       {
-        path:"/myBids",
-        element:<PrivateRoute><MyBids></MyBids></PrivateRoute>
+        path:"/wishlist",
+        element:<PrivateRoute><Wishlist></Wishlist></PrivateRoute>
       },
       {
         path:"/bidRequests",
