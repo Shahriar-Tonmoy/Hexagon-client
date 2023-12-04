@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const ManageOneReview = ({rev,handleDelete}) => {
+const LatestUserOneReview = ({rev}) => {
     const {
         _id,
         review,
@@ -21,14 +21,6 @@ const ManageOneReview = ({rev,handleDelete}) => {
             <p>{userEmail}</p>
             <p className="font-semibold">Review - {review}</p>
             <div className="card-actions justify-start">
-              <Link>
-                <button
-                  onClick={() =>{handleDelete(_id)}}
-                  className={`btn bg-[#1B9C85] text-white hover:bg-green-500`}
-                >
-                  Delete
-                </button>
-              </Link>
             </div>
           </div>
         </div>
@@ -36,4 +28,4 @@ const ManageOneReview = ({rev,handleDelete}) => {
     );
 };
 
-export default ManageOneReview;
+export default LatestUserOneReview;

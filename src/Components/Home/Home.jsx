@@ -5,6 +5,8 @@ import "aos/dist/aos.css";
 import Jobs from "../Jobs/Jobs";
 import FAQ from "../FAQ/FAQ";
 import Email from "../Email/Email";
+import Advertisement from "../Advertisement/Advertisement";
+import LatestUserReview from "../LatestUserReview/LatestUserReview";
 
 const Home = () => {
   useEffect(() => {
@@ -35,7 +37,10 @@ const Home = () => {
         </div>
       </div>
       <div>
-        <Jobs></Jobs>
+        <Advertisement></Advertisement>
+      </div>
+      <div>
+        <LatestUserReview></LatestUserReview>
       </div>
       <div
         className="container mx-auto mb-32"
