@@ -32,7 +32,7 @@ const BoughtProperty = ({property}) => {
             <Link to={`/update/${_id}`}>
               <button
                 className={`btn bg-[#1B9C85] text-white hover:bg-green-500 ${
-                  Status === "pending" ? "hidden" : "block"
+                  (Status === "pending" || Status === "rejected") ? "hidden" : "block"
                 }`}
               >
                 Pay

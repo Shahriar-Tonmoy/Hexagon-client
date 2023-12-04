@@ -27,6 +27,7 @@ const MakeOffer = () => {
 
     const propertyId = _id;
     const propertyImage = image;
+    const AgentEmail = agentEmail;
 
     const handleNewOffer = async (e) => {
         e.preventDefault();
@@ -46,6 +47,7 @@ const MakeOffer = () => {
             Title,
             Location,
             AgentName,
+            AgentEmail,
             OfferedAmount,
             BuyerEmail,
             BuyerName,

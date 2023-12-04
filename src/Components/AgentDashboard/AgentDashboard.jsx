@@ -64,6 +64,7 @@ const AgentDashboard = ({ currentUser }) => {
             <p>See your sold properties</p>
           </div>
         </div>
+        <Link to={`/requestedProperties`}>
         <div className="card w-72 bg-base-100 shadow-xl image-full ">
           <figure className="rounded">
             <img src="https://i.ibb.co/SVbpnYV/pngwing-com-2.png" alt="Shoes" />
@@ -75,6 +76,9 @@ const AgentDashboard = ({ currentUser }) => {
             <p>See Requested properties</p>
           </div>
         </div>
+        </Link>
+
+        
       </div>
     </div>
   );

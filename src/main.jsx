@@ -30,6 +30,7 @@ import BoughtProperties from "./Components/BoughtProperties/BoughtProperties.jsx
 import MyReviews from "./Components/MyReviews/MyReviews.jsx";
 import ManageUsers from "./Components/ManageUsers/ManageUsers.jsx";
 import ManageReview from "./Components/ManageReview/ManageReview.jsx";
+import RequestedProperties from "./Components/RequestedProperties/RequestedProperties.jsx";
 
 const router = createBrowserRouter([
   {
@@ -92,6 +93,10 @@ const router = createBrowserRouter([
       {
         path:"/manageReview",
         element:<PrivateRoute><ManageReview></ManageReview></PrivateRoute>
+      },
+      {
+        path:"/requestedProperties",
+        element:<PrivateRoute><RequestedProperties></RequestedProperties></PrivateRoute>
       },
       {
         path:"/broughtProperties",
