@@ -15,7 +15,7 @@ const BoughtProperties = () => {
 
 
   useEffect(() => {
-    fetch(`http://localhost:3000/offers?BuyerEmail=${user.email}`)
+    fetch(`https://hexagon-server.vercel.app/offers?BuyerEmail=${user.email}`)
       .then((res) => res.json())
       .then((data) => setMyProperties(data));
   }, []);

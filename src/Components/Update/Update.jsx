@@ -31,7 +31,7 @@ const Update = () => {
         const fPriceRange = form.priceRange.value;
         const updatedProperty = {fImage, fPropertyTitle, fLocation, fAgentName, fAgentEmail, fPriceRange};
         
-        fetch(`http://localhost:3000/properties/${_id}`,{
+        fetch(`https://hexagon-server.vercel.app/properties/${_id}`,{
             method:'PUT',
             headers:{
                 'content-type': "application/json"

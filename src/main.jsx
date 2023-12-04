@@ -74,13 +74,13 @@ const router = createBrowserRouter([
       {
         path:"/details/:id",
         element:<PrivateRoute><Details></Details></PrivateRoute>,
-        loader: ()=>fetch('http://localhost:3000/properties')
+        loader: ()=>fetch('https://hexagon-server.vercel.app/properties')
 
       },
       {
         path:"/profile/:id",
         element:<PrivateRoute><Profile></Profile></PrivateRoute>,
-        loader: ()=>fetch('http://localhost:3000/users')
+        loader: ()=>fetch('https://hexagon-server.vercel.app/users')
 
       },
       {
@@ -114,7 +114,7 @@ const router = createBrowserRouter([
       {
         path:"/makeOffer/:id",
         element:<PrivateRoute><MakeOffer></MakeOffer></PrivateRoute>,
-        loader: ()=>fetch('http://localhost:3000/properties')
+        loader: ()=>fetch('https://hexagon-server.vercel.app/properties')
       },
       {
         path:"/bidRequests",
@@ -127,7 +127,7 @@ const router = createBrowserRouter([
       {
         path:"/update/:id",
         element:<PrivateRoute><Update></Update></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:3000/properties/${params.id}`)
+        loader: ({params}) => fetch(`https://hexagon-server.vercel.app/properties/${params.id}`)
       }
     ]
   },

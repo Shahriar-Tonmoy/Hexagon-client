@@ -12,7 +12,7 @@ const Dashboard = () => {
     const userEmail = user.email;
 
   useEffect(() => {
-    fetch("http://localhost:3000/users")
+    fetch("https://hexagon-server.vercel.app/users")
       .then((res) => res.json())
       .then((data) => setUsers(data));
   }, []);

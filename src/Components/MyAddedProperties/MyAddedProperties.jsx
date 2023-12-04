@@ -14,7 +14,7 @@ const MyAddedProperties = () => {
 
 
   useEffect(() => {
-    fetch(`http://localhost:3000/properties?agentEmail=${user.email}`)
+    fetch(`https://hexagon-server.vercel.app/properties?agentEmail=${user.email}`)
       .then((res) => res.json())
       .then((data) => setMyProperties(data));
   }, []);
@@ -30,7 +30,7 @@ const MyAddedProperties = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/properties/${id}`, {
+        fetch(`https://hexagon-server.vercel.app/properties/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

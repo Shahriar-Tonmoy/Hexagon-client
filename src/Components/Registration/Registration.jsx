@@ -29,7 +29,7 @@ const Registration = () => {
         };
 
         fetch(
-          "http://localhost:3000/users",
+          "https://hexagon-server.vercel.app/users",
           {
             method: "POST",
             headers: {

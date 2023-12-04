@@ -1,8 +1,22 @@
-# React + Vite
+## Features
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Feature 1: 
+User can create his/her own account or log in with google. This is controlled by firebase authentication system.  
 
-Currently, two official plugins are available:
+### Feature 2:
+There are three types of dashboard, admin, agent, and normal users
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Feature 3:
+Agent can add property, then admin will verify this if it is verified then added properties will be displayed to all properties page.
+
+### Feature 4:
+Admin can set user role, from dashboard user manage route
+
+### Feature 5:
+user can write review for a property and also can remove his review any time.
+
+
+
+[https://hexagon-f9ce4.web.app/](https://hexagon-f9ce4.web.app/)
+
+

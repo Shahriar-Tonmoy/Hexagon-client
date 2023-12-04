@@ -12,7 +12,7 @@ const MyReviews = () => {
     
 
     useEffect(() => {
-        fetch(`http://localhost:3000/reviews?userEmail=${user.email}`)
+        fetch(`https://hexagon-server.vercel.app/reviews?userEmail=${user.email}`)
           .then((res) => res.json())
           .then((data) => setReviews(data));
       }, []);
@@ -28,7 +28,7 @@ const MyReviews = () => {
           confirmButtonText: "Yes, delete it!",
         }).then((result) => {
           if (result.isConfirmed) {
-            fetch(`http://localhost:3000/reviews/${id}`, {
+            fetch(`https://hexagon-server.vercel.app/reviews/${id}`, {
               method: "DELETE",
             })
               .then((res) => res.json())

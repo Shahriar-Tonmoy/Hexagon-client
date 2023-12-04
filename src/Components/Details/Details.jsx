@@ -31,7 +31,7 @@ const Details = () => {
   const [reviews, setReviews] = useState();
 
   useEffect(() => {
-    fetch(`http://localhost:3000/reviews?propertyId=${_id}`)
+    fetch(`https://hexagon-server.vercel.app/reviews?propertyId=${_id}`)
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);
@@ -69,7 +69,7 @@ const Details = () => {
       propertyTitle,
       propertyAgentName
     };
-    fetch("http://localhost:3000/reviews", {
+    fetch("https://hexagon-server.vercel.app/reviews", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -102,7 +102,7 @@ const Details = () => {
       userEmail,
       propertyId
     };
-    fetch("http://localhost:3000/wishlist", {
+    fetch("https://hexagon-server.vercel.app/wishlist", {
       method: "POST",
       headers: {
         "content-type": "application/json",

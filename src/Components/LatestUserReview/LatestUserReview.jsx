@@ -15,7 +15,7 @@ const LatestUserReview = () => {
     
 
     useEffect(() => {
-        fetch(`http://localhost:3000/reviews`)
+        fetch(`https://hexagon-server.vercel.app/reviews`)
           .then((res) => res.json())
           .then((data) => setReviews(data));
       }, []);
@@ -26,7 +26,7 @@ const LatestUserReview = () => {
     <div className="">
       <ToastContainer></ToastContainer>
       <h1 className="text-center text-5xl font-bold mb-16 mt-16 text-[#59CE8F]">
-        Manage Reviews
+        Latest Reviews
       </h1>
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 container mx-auto mt-10 mb-16">
         {sliceReviews.map((rev) => (

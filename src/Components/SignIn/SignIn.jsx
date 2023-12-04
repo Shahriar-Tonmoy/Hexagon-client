@@ -11,7 +11,7 @@ const SignIn = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/users")
+    fetch("https://hexagon-server.vercel.app/users")
       .then((res) => res.json())
       .then((data) => setUsers(data));
   }, []);

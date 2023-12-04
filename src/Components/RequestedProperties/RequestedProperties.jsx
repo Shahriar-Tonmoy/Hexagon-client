@@ -7,13 +7,13 @@ const RequestedProperties = () => {
   const [properties, setProperties] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/offers?AgentEmail=${user.email}`)
+    fetch(`https://hexagon-server.vercel.app/offers?AgentEmail=${user.email}`)
       .then((res) => res.json())
       .then((data) => setProperties(data));
   }, []);
 
   const handleUpdateStatusRejected = (id) => {
-    fetch(`http://localhost:3000/offers/${id}`, {
+    fetch(`https://hexagon-server.vercel.app/offers/${id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
@@ -34,7 +34,7 @@ const RequestedProperties = () => {
       });
   };
   const handleUpdateStatusAccepted = (id) => {
-    fetch(`http://localhost:3000/offers/${id}`, {
+    fetch(`https://hexagon-server.vercel.app/offers/${id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",

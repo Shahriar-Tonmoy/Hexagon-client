@@ -45,7 +45,7 @@ const AddProperty = () => {
       advertise
     };
     form.reset();
-    fetch("http://localhost:3000/properties", {
+    fetch("https://hexagon-server.vercel.app/properties", {
       method: "POST",
       headers: {
         "content-type": "application/json",

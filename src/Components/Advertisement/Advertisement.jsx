@@ -7,7 +7,7 @@ const Advertisement = () => {
     
 
     useEffect(() => {
-        fetch(`http://localhost:3000/properties?advertise=yes`)
+        fetch(`https://hexagon-server.vercel.app/properties?advertise=yes`)
           .then((res) => res.json())
           .then((data) => setProperties(data));
       }, []);

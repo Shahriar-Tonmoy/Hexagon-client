@@ -11,13 +11,13 @@ const ManageUsers = () => {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:3000/users`)
+        fetch(`https://hexagon-server.vercel.app/users`)
           .then((res) => res.json())
           .then((data) => setUsers(data));
       }, []);
     
       const handleUpdateRoleAdmin = (id) => {
-        fetch(`http://localhost:3000/users/${id}`, {
+        fetch(`https://hexagon-server.vercel.app/users/${id}`, {
           method: "PATCH",
           headers: {
             "content-type": "application/json",
@@ -40,7 +40,7 @@ const ManageUsers = () => {
       };
 
       const handleUpdateRoleAgent = (id) => {
-        fetch(`http://localhost:3000/users/${id}`, {
+        fetch(`https://hexagon-server.vercel.app/users/${id}`, {
           method: "PATCH",
           headers: {
             "content-type": "application/json",
@@ -62,7 +62,7 @@ const ManageUsers = () => {
           });
       };
       const handleUpdateFraud = (id) => {
-        fetch(`http://localhost:3000/users/${id}`, {
+        fetch(`https://hexagon-server.vercel.app/users/${id}`, {
           method: "PATCH",
           headers: {
             "content-type": "application/json",
@@ -95,7 +95,7 @@ const ManageUsers = () => {
           confirmButtonText: "Yes, delete it!",
         }).then((result) => {
           if (result.isConfirmed) {
-            fetch(`http://localhost:3000/users/${id}`, {
+            fetch(`https://hexagon-server.vercel.app/users/${id}`, {
               method: "DELETE",
             })
               .then((res) => res.json())

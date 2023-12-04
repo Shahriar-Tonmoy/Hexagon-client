@@ -12,7 +12,7 @@ const Wishlist = () => {
     const { user, signOutUser } = useContext(AuthContext);
 
     useEffect(() => {
-        fetch(`http://localhost:3000/wishlist?userEmail=${user.email}`)
+        fetch(`https://hexagon-server.vercel.app/wishlist?userEmail=${user.email}`)
           .then((res) => res.json())
           .then((data) => setWishlist(data));
       }, []);
@@ -28,7 +28,7 @@ const Wishlist = () => {
           confirmButtonText: "Yes, delete it!",
         }).then((result) => {
           if (result.isConfirmed) {
-            fetch(`http://localhost:3000/wishlist/${id}`, {
+            fetch(`https://hexagon-server.vercel.app/wishlist/${id}`, {
               method: "DELETE",
             })
               .then((res) => res.json())

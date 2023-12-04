@@ -71,7 +71,7 @@ const MakeOffer = () => {
         }
 
         
-        fetch("http://localhost:3000/offers", {
+        fetch("https://hexagon-server.vercel.app/offers", {
           method: "POST",
           headers: {
             "content-type": "application/json",

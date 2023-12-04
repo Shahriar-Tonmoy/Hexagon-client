@@ -7,7 +7,7 @@ const AllProperties = () => {
     
 
     useEffect(() => {
-        fetch(`http://localhost:3000/properties`)
+        fetch(`https://hexagon-server.vercel.app/properties`)
           .then((res) => res.json())
           .then((data) => setProperties(data));
       }, []);

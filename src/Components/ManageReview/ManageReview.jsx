@@ -13,7 +13,7 @@ const ManageReview = () => {
     
 
     useEffect(() => {
-        fetch(`http://localhost:3000/reviews`)
+        fetch(`https://hexagon-server.vercel.app/reviews`)
           .then((res) => res.json())
           .then((data) => setReviews(data));
       }, []);
@@ -29,7 +29,7 @@ const ManageReview = () => {
           confirmButtonText: "Yes, delete it!",
         }).then((result) => {
           if (result.isConfirmed) {
-            fetch(`http://localhost:3000/reviews/${id}`, {
+            fetch(`https://hexagon-server.vercel.app/reviews/${id}`, {
               method: "DELETE",
             })
               .then((res) => res.json())

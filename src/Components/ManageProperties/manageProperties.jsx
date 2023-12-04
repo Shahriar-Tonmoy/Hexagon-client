@@ -7,13 +7,13 @@ const ManageProperties = () => {
   const [properties, setProperties] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/properties`)
+    fetch(`https://hexagon-server.vercel.app/properties`)
       .then((res) => res.json())
       .then((data) => setProperties(data));
   }, []);
 
   const handleUpdateStatusRejected = (id) => {
-    fetch(`http://localhost:3000/properties/${id}`, {
+    fetch(`https://hexagon-server.vercel.app/properties/${id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
@@ -34,7 +34,7 @@ const ManageProperties = () => {
       });
   };
   const handleUpdateStatusAccepted = (id) => {
-    fetch(`http://localhost:3000/properties/${id}`, {
+    fetch(`https://hexagon-server.vercel.app/properties/${id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
