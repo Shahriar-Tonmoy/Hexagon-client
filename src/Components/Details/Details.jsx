@@ -36,12 +36,28 @@ const Details = () => {
       .then((data) => setReviews(data));
   }, []);
   const propertyId = _id;
+  const propertyTitle = title;
+  const propertyAgentName = agentName;
 
   const handleReview = (e) => {
     e.preventDefault();
+    function getCurrentTime() {
+      const now = new Date();
+    
+
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+      const seconds = now.getSeconds();
+
+      const formattedTime = `${(hours)}:${(minutes)}`;
+    
+      return formattedTime;
+    }
     const review = e.target.review.value;
     console.log(review);
     e.target.reset();
+    const reviewTime = getCurrentTime();
+    console.log(reviewTime);
     
 
     const newReview = {
@@ -49,6 +65,9 @@ const Details = () => {
       propertyId,
       userEmail,
       userImage,
+      reviewTime,
+      propertyTitle,
+      propertyAgentName
     };
     fetch("http://localhost:3000/reviews", {
       method: "POST",
@@ -160,7 +179,7 @@ const Details = () => {
               </h1>
               <div className="grid grid-cols-3">
               {reviews?.map((review) => (
-                <Review key={review._id} review={review}></Review>
+                <Review key={review?._id} review={review}></Review>
               ))}
               </div>
             </div>

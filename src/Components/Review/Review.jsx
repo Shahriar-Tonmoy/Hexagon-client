@@ -12,6 +12,7 @@ const Review = ({ review }) => {
         </div>
         <div className="chat-header">
           {review?.userEmail}
+          <time className="text-xs opacity-50">{review?.reviewTime}</time>
         </div>
         <div className="chat-bubble bg-[#1B9C85]">{review?.review}</div>
       </div>
