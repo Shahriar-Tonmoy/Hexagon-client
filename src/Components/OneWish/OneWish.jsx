@@ -10,7 +10,8 @@ const OneWish = ({wish, handleDelete}) => {
         priceRange,
         image,
         status,
-        agentImage
+        agentImage,
+        propertyId
       } = wish;
     return (
         <div>
@@ -29,7 +30,7 @@ const OneWish = ({wish, handleDelete}) => {
         <p className="font-semibold">Verification Status - {status}</p>
         <p className="font-semibold">Price range - <span className="text-[#1B9C85]">{priceRange}</span></p>
         <div className="card-actions justify-start">
-        <Link ><button className="btn bg-[#1B9C85] text-white hover:bg-green-500">Make an offer button</button></Link>
+        <Link to={`/makeOffer/${propertyId}`}><button className="btn bg-[#1B9C85] text-white hover:bg-green-500">Make an offer</button></Link>
         <Link ><button onClick={() =>{handleDelete(_id)}} className="btn bg-[#1B9C85] text-white hover:bg-green-500">Remove</button></Link>
           
         </div>

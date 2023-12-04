@@ -25,6 +25,7 @@ import MyAddedProperties from "./Components/MyAddedProperties/MyAddedProperties.
 import ManageProperties from "./Components/ManageProperties/manageProperties.jsx";
 import AllProperties from "./Components/AllProperties/AllProperties.jsx";
 import Wishlist from "./Components/Wishlist/Wishlist.jsx";
+import MakeOffer from "./Components/MakeOffer/MakeOffer.jsx";
 
 const router = createBrowserRouter([
   {
@@ -79,6 +80,11 @@ const router = createBrowserRouter([
       {
         path:"/wishlist",
         element:<PrivateRoute><Wishlist></Wishlist></PrivateRoute>
+      },
+      {
+        path:"/makeOffer/:id",
+        element:<PrivateRoute><MakeOffer></MakeOffer></PrivateRoute>,
+        loader: ()=>fetch('http://localhost:3000/properties')
       },
       {
         path:"/bidRequests",

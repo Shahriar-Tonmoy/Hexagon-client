@@ -140,7 +140,7 @@ const AddProperty = () => {
                 </div>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">Price range(ex: $3000-$5000)</span>
+                    <span className="label-text">Price range(ex: 3000-5000)</span>
                   </label>
                   <input
                     type="text"

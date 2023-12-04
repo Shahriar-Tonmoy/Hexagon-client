@@ -35,13 +35,14 @@ const Details = () => {
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);
+  const propertyId = _id;
 
   const handleReview = (e) => {
     e.preventDefault();
     const review = e.target.review.value;
     console.log(review);
     e.target.reset();
-    const propertyId = _id;
+    
 
     const newReview = {
       review,
@@ -80,6 +81,7 @@ const Details = () => {
       status,
       agentImage,
       userEmail,
+      propertyId
     };
     fetch("http://localhost:3000/wishlist", {
       method: "POST",
