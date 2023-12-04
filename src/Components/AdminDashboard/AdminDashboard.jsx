@@ -46,6 +46,7 @@ const AdminDashboard = ({ currentUser }) => {
         </Link>
         
         
+        <Link to={`/manageReview`}>
         <div className="card w-72 bg-base-100 shadow-xl image-full ">
           <figure className="rounded">
             <img src="https://i.ibb.co/r50bnYg/pngwing-com-4.png" alt="Shoes" />
@@ -57,6 +58,7 @@ const AdminDashboard = ({ currentUser }) => {
             <p></p>
           </div>
         </div>
+        </Link>
       </div>
     </div>
   );

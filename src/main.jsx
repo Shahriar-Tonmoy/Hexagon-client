@@ -29,6 +29,7 @@ import MakeOffer from "./Components/MakeOffer/MakeOffer.jsx";
 import BoughtProperties from "./Components/BoughtProperties/BoughtProperties.jsx";
 import MyReviews from "./Components/MyReviews/MyReviews.jsx";
 import ManageUsers from "./Components/ManageUsers/ManageUsers.jsx";
+import ManageReview from "./Components/ManageReview/ManageReview.jsx";
 
 const router = createBrowserRouter([
   {
@@ -87,6 +88,10 @@ const router = createBrowserRouter([
       {
         path:"/manageUsers",
         element:<PrivateRoute><ManageUsers></ManageUsers></PrivateRoute>
+      },
+      {
+        path:"/manageReview",
+        element:<PrivateRoute><ManageReview></ManageReview></PrivateRoute>
       },
       {
         path:"/broughtProperties",

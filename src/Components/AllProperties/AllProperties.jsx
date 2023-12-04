@@ -4,14 +4,18 @@ import Property from "../Property/Property";
 const AllProperties = () => {
 
     const [properties, setProperties] = useState([]);
+    
 
     useEffect(() => {
         fetch(`http://localhost:3000/properties`)
           .then((res) => res.json())
           .then((data) => setProperties(data));
       }, []);
+    
+      
 
       const verifiedProperties = properties.filter((property) => property.status === 'verified');
+      
 
   return (
     <div className="min-h-screen">

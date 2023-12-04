@@ -67,7 +67,7 @@ const ManageUsers = () => {
           headers: {
             "content-type": "application/json",
           },
-          body: JSON.stringify({ fraud: "yes" }),
+          body: JSON.stringify({ fraud: "Fraud" }),
         })
           .then((res) => res.json())
           .then((data) => {
@@ -76,7 +76,7 @@ const ManageUsers = () => {
               //update status
               const remaining = users.filter((job) => job._id !== id);
               const updated = users.find((job) => job._id === id);
-              updated.fraud = "yes";
+              updated.fraud = "Fraud";
               updated.role = null;
               const newBidJobs = [updated, ...remaining];
               setUsers(newBidJobs);
@@ -124,7 +124,7 @@ const ManageUsers = () => {
               <th className="text-[#59CE8F] text-lg">User Name</th>
               <th className="text-[#59CE8F] text-lg">User Email</th>
               <th className="text-[#59CE8F] text-lg">Role</th>
-              <th className="text-[#59CE8F] text-lg">Fraud</th>
+              
             </tr>
           </thead>
           <tbody>
@@ -134,9 +134,10 @@ const ManageUsers = () => {
                 <td>{user.name}</td>
                 <td>{user.email}</td>
                 <td>{user.role}</td>
-                <td>{user.fraud}</td>
                 <td className="">
-                  <div className=" w-max">
+                    {
+                        (user.fraud === 'Fraud') ? <p className="text-red-800">{user.fraud}</p> :
+                        <div className=" w-max">
                   <button
                     onClick={()=>handleUpdateRoleAdmin(user._id)}
                     className={` underline hover:text-[#59CE8F]  mr-4 `}
@@ -163,6 +164,8 @@ const ManageUsers = () => {
                     Delete
                   </button>
                   </div>
+                    }
+                  
                 </td>
               </tr>
             ))}

@@ -17,8 +17,10 @@ const AgentDashboard = ({ currentUser }) => {
             </div>
           </div>
         </Link>
-        <Link to={`/addProperty`}>
-          <div className="card w-72 bg-base-100 shadow-xl image-full ">
+        {
+            !currentUser.fraud &&
+            <Link to={`/addProperty`}>
+            <div className="card w-72 bg-base-100 shadow-xl image-full ">
             <figure className="rounded">
               <img
                 src="https://i.ibb.co/3m7ttFq/pngwing-com-1.png"
@@ -32,7 +34,9 @@ const AgentDashboard = ({ currentUser }) => {
               <p>Add new property</p>
             </div>
           </div>
+          
         </Link>
+        }
 
         <Link to='/myAddedProperties'> 
         <div className="card w-72 bg-base-100 shadow-xl image-full ">
