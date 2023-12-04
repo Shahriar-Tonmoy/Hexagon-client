@@ -31,6 +31,7 @@ const AddProperty = () => {
     const status = 'pending';
     const agentImage = user.photoURL;
     console.log(agentImage);
+    const advertise = 'no';
     
     const newProperty = {
       title,
@@ -40,7 +41,8 @@ const AddProperty = () => {
       priceRange,
       image,
       status,
-      agentImage
+      agentImage,
+      advertise
     };
     form.reset();
     fetch("http://localhost:3000/properties", {

@@ -7,15 +7,15 @@ const Advertisement = () => {
     
 
     useEffect(() => {
-        fetch(`http://localhost:3000/properties`)
+        fetch(`http://localhost:3000/properties?advertise=yes`)
           .then((res) => res.json())
           .then((data) => setProperties(data));
       }, []);
     
       
 
-      const verifiedProperties = properties.filter((property) => property.status === 'verified');
-      const slicedProperties = verifiedProperties.slice(0,4)
+      //const verifiedProperties = properties.filter((property) => property.status === 'verified');
+    //   const slicedProperties = verifiedProperties.slice(0,4)
       
 
   return (
@@ -24,7 +24,7 @@ const Advertisement = () => {
         Advertisement
       </h1>
       <div className="grid grid-cols-2 gap-10 container mx-auto mt-10 mb-16">
-        {slicedProperties.map((property) => (
+        {properties.map((property) => (
           <Property
             key={property._id}
             property={property}

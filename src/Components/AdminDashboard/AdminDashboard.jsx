@@ -59,6 +59,19 @@ const AdminDashboard = ({ currentUser }) => {
           </div>
         </div>
         </Link>
+        <Link to={`/advertiseProperties`}>
+        <div className="card w-72 bg-base-100 shadow-xl image-full ">
+          <figure className="rounded">
+            <img src="https://i.ibb.co/3m7ttFq/pngwing-com-1.png" alt="Shoes" />
+          </figure>
+          <div className="card-body rounded-full">
+            <h2 className="card-title text-4xl font-extrabold text-white">
+              Advertise Properties
+            </h2>
+            <p></p>
+          </div>
+        </div>
+        </Link>
       </div>
     </div>
   );

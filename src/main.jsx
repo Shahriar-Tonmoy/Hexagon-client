@@ -31,6 +31,7 @@ import MyReviews from "./Components/MyReviews/MyReviews.jsx";
 import ManageUsers from "./Components/ManageUsers/ManageUsers.jsx";
 import ManageReview from "./Components/ManageReview/ManageReview.jsx";
 import RequestedProperties from "./Components/RequestedProperties/RequestedProperties.jsx";
+import AdvertiseProperties from "./Components/AdvertiseProperties/AdvertiseProperties.jsx";
 
 const router = createBrowserRouter([
   {
@@ -101,6 +102,10 @@ const router = createBrowserRouter([
       {
         path:"/broughtProperties",
         element:<PrivateRoute><BoughtProperties></BoughtProperties></PrivateRoute>
+      },
+      {
+        path:"/advertiseProperties",
+        element:<PrivateRoute><AdvertiseProperties></AdvertiseProperties></PrivateRoute>
       },
       {
         path:"/myReviews",
