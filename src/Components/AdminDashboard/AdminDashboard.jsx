@@ -30,8 +30,8 @@ const AdminDashboard = ({ currentUser }) => {
           </div>
         </div>
         </Link>
-
         
+        <Link to={`/manageUsers`}>
         <div className="card w-72 bg-base-100 shadow-xl image-full ">
           <figure className="rounded">
             <img src="https://i.ibb.co/r0STVCj/pngwing-com-3.png" alt="Shoes" />
@@ -43,6 +43,9 @@ const AdminDashboard = ({ currentUser }) => {
             <p></p>
           </div>
         </div>
+        </Link>
+        
+        
         <div className="card w-72 bg-base-100 shadow-xl image-full ">
           <figure className="rounded">
             <img src="https://i.ibb.co/r50bnYg/pngwing-com-4.png" alt="Shoes" />

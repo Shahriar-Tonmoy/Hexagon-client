@@ -28,6 +28,7 @@ import Wishlist from "./Components/Wishlist/Wishlist.jsx";
 import MakeOffer from "./Components/MakeOffer/MakeOffer.jsx";
 import BoughtProperties from "./Components/BoughtProperties/BoughtProperties.jsx";
 import MyReviews from "./Components/MyReviews/MyReviews.jsx";
+import ManageUsers from "./Components/ManageUsers/ManageUsers.jsx";
 
 const router = createBrowserRouter([
   {
@@ -82,6 +83,10 @@ const router = createBrowserRouter([
       {
         path:"/wishlist",
         element:<PrivateRoute><Wishlist></Wishlist></PrivateRoute>
+      },
+      {
+        path:"/manageUsers",
+        element:<PrivateRoute><ManageUsers></ManageUsers></PrivateRoute>
       },
       {
         path:"/broughtProperties",

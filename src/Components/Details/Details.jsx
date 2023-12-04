@@ -145,6 +145,14 @@ const Details = () => {
             >
               Review
             </button>
+            <h1 className="text-xl font-bold text-[#1B9C85] mb-10 mt-40">
+                Reviews
+              </h1>
+              <div className="grid grid-cols-3">
+              {reviews?.map((review) => (
+                <Review key={review?._id} review={review}></Review>
+              ))}
+              </div>
             <dialog id="my_modal_2" className="modal">
               <div className="modal-box">
                 <h3 className="font-bold text-lg text-[#1B9C85]">
@@ -167,25 +175,19 @@ const Details = () => {
                 <button>close</button>
               </form>
             </dialog>
-          </div>
-        </div>
-      </div>
-      <div className="container  mx-auto">
+            <div className="container  mx-auto">
         <div className="hero bg-base-200">
           <div className="hero-content flex-col lg:flex-row-reverse">
             <div>
-              <h1 className="text-5xl font-bold text-[#1B9C85] text-center mb-10">
-                Reviews
-              </h1>
-              <div className="grid grid-cols-3">
-              {reviews?.map((review) => (
-                <Review key={review?._id} review={review}></Review>
-              ))}
-              </div>
+              
             </div>
           </div>
         </div>
       </div>
+          </div>
+        </div>
+      </div>
+      
     </div>
   );
 };

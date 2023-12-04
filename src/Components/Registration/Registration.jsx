@@ -18,7 +18,7 @@ const Registration = () => {
         const name = e.target.name.value;
         const photo = e.target.photourl.value;
         const role = 'user';
-        const fraud = 'no';
+        const fraud = '';
 
         const newUser = {
           email,
