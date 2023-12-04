@@ -26,6 +26,7 @@ import ManageProperties from "./Components/ManageProperties/manageProperties.jsx
 import AllProperties from "./Components/AllProperties/AllProperties.jsx";
 import Wishlist from "./Components/Wishlist/Wishlist.jsx";
 import MakeOffer from "./Components/MakeOffer/MakeOffer.jsx";
+import BoughtProperties from "./Components/BoughtProperties/BoughtProperties.jsx";
 
 const router = createBrowserRouter([
   {
@@ -80,6 +81,10 @@ const router = createBrowserRouter([
       {
         path:"/wishlist",
         element:<PrivateRoute><Wishlist></Wishlist></PrivateRoute>
+      },
+      {
+        path:"/broughtProperties",
+        element:<PrivateRoute><BoughtProperties></BoughtProperties></PrivateRoute>
       },
       {
         path:"/makeOffer/:id",

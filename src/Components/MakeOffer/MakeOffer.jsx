@@ -25,6 +25,9 @@ const MakeOffer = () => {
       agentImage,
     } = selectedProperty;
 
+    const propertyId = _id;
+    const propertyImage = image;
+
     const handleNewOffer = async (e) => {
         e.preventDefault();
         console.log(e);
@@ -46,8 +49,11 @@ const MakeOffer = () => {
             OfferedAmount,
             BuyerEmail,
             BuyerName,
+            propertyId,
             Status,
-          BuyingDate
+            BuyingDate,
+            propertyImage
+
         };
         form.reset();
         const regex = /(\d+)-(\d+)/;
@@ -134,7 +140,7 @@ const MakeOffer = () => {
                 </div>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">Offered Amount</span>
+                    <span className="label-text">Offered Amount (ex: 50000)</span>
                   </label>
                   <input
                     type="text"

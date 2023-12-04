@@ -34,6 +34,8 @@ const UserDashboard = ({ currentUser }) => {
           </div>
         </Link>
 
+
+        <Link to={`/broughtProperties`}>
         <div className="card w-72 bg-base-100 shadow-xl image-full ">
           <figure className="rounded">
             <img src="https://i.ibb.co/3m7ttFq/pngwing-com-1.png" alt="Shoes" />
@@ -45,6 +47,9 @@ const UserDashboard = ({ currentUser }) => {
             <p></p>
           </div>
         </div>
+
+        </Link>
+        
         <div className="card w-72 bg-base-100 shadow-xl image-full ">
           <figure className="rounded">
             <img src="https://i.ibb.co/r50bnYg/pngwing-com-4.png" alt="Shoes" />
