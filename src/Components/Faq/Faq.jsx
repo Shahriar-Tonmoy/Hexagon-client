@@ -5,33 +5,33 @@ const FAQ = () => {
         <div className="collapse collapse-arrow bg-[#1B9C85]">
           <input type="radio" name="my-accordion-2" checked="checked" />
           <div className="collapse-title text-xl font-medium text-white">
-          How can I list services on the marketplace?
+          What the first step of the home buying process?
           </div>
           <div className="collapse-content">
             <p className="text-white">
-            To list your services on our marketplace, simply sign up for an account and navigate to your dashboard. From there, you can create a new listing, providing details such as product description, images, pricing, and any other relevant information. Once submitted, our team will review the listing to ensure it meets our guidelines, and upon approval, your products or services will be live on the marketplace for potential buyers to discover.
+            First, you need to know how much you can borrow. Knowing how much home you can afford narrows down online home searching to suitable properties, thus no time is wasted considering homes that are not within your budget. (Pre-approvals also help prevent disappointment caused by falling in love unaffordable homes.)
             </p>
           </div>
         </div>
         <div className="collapse collapse-arrow border-2 border-[#1B9C85]">
           <input type="radio" name="my-accordion-2" />
           <div className="collapse-title text-xl font-medium">
-          How does the payment process work for transactions on the marketplace?
+          How long does it take to buy a home?
           </div>
           <div className="collapse-content">
             <p>
-            Our marketplace facilitates secure and convenient transactions. When a buyer decides to purchase a product or service, they can proceed to the checkout process. We provide various payment options, including credit/debit cards and other secure payment methods. The payment is securely processed through our platform, and once the transaction is completed, the funds are transferred to the seller's account, minus any applicable fees. Our payment system is designed to ensure a seamless and protected buying and selling experience for all users.
+            From start (searching online) to finish (closing escrow), buying a home takes about 10 to 12 weeks. Once a home is selected an the offer is accepted, the average time to complete the escrow period on a home is 30 to 45 days (under normal market conditions). Though, well-prepared home buyers who pay cash have been known to purchase properties faster than that.
             </p>
           </div>
         </div>
         <div className="collapse collapse-arrow bg-[#1B9C85]">
           <input type="radio" name="my-accordion-2" />
           <div className="collapse-title text-xl font-medium text-white">
-          What measures are in place to ensure the safety and reliability of transactions?
+          What is a buyer’s market?
           </div>
           <div className="collapse-content">
             <p className="text-white">
-            We prioritize the safety and reliability of transactions on our marketplace. We implement robust security measures, including encryption for sensitive data, to protect user information. Additionally, our platform includes a rating and review system, allowing buyers to provide feedback on their experiences with sellers. This helps build trust within the community and enables users to make informed decisions when choosing products or services. If any issues arise, our customer support team is available to assist and resolve disputes, ensuring a positive experience for all users.
+            A buyer’s market is characterized by declining home prices and reduced demand. Several factors may affect long-term and short-term buyer demand, like: Economic disruption - a big employer shuts down operations, laying off their workforce.
             </p>
           </div>
         </div>
