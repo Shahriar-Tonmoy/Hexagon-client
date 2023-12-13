@@ -17,7 +17,7 @@ There are three types of dashboard - admin, agent, and normal users
 ### Agent dashboard
 - From agent dashboard there is a route from where he/she can add a property which he/she wants to sell.
 - Agent can see all of his/her added property from my added property route.
-- from my added property page he/she is able to delete any of his/her added property, also can update any property (which is verified by admin).
+- From my added property page he/she is able to delete any of his/her added property, also can update any property (which is verified by admin).
 - In requested property agent is able to see all requests for his/her added property. From there he/she can accept/reject that offer.
 
 
