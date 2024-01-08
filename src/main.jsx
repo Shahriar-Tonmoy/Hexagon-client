@@ -32,6 +32,7 @@ import ManageUsers from "./Components/ManageUsers/ManageUsers.jsx";
 import ManageReview from "./Components/ManageReview/ManageReview.jsx";
 import RequestedProperties from "./Components/RequestedProperties/RequestedProperties.jsx";
 import AdvertiseProperties from "./Components/AdvertiseProperties/AdvertiseProperties.jsx";
+import Payment from "./Payment/payment.jsx";
 
 const router = createBrowserRouter([
   {
@@ -119,6 +120,10 @@ const router = createBrowserRouter([
       {
         path:"/bidRequests",
         element:<PrivateRoute><BidRequests></BidRequests></PrivateRoute>
+      },
+      {
+        path:"/payment",
+        element:<PrivateRoute><Payment></Payment></PrivateRoute>
       },
       {
         path:"/myPostedJobs",

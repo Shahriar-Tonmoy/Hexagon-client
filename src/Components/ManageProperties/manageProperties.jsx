@@ -57,37 +57,38 @@ const ManageProperties = () => {
 
   return (
     <div className="min-h-screen">
-      <h1 className="text-center text-5xl font-bold mb-16 text-[#59CE8F]">
+      <h1 className="text-center text-5xl font-bold mb-16 mt-16 text-[#00ADB5]">
         Manage Properties
       </h1>
       <div className="overflow-x-auto container mx-auto">
-        <table className="table table-zebra">
+        <table className="table ">
           {/* head */}
           <thead>
             <tr>
-              <th className="text-[#59CE8F] text-lg">Title</th>
-              <th className="text-[#59CE8F] text-lg">Location.</th>
-              <th className="text-[#59CE8F] text-lg">Agent name</th>
-              <th className="text-[#59CE8F] text-lg">Agent email</th>
-              <th className="text-[#59CE8F] text-lg">Price range</th>
+              <th className="text-[#00ADB5] text-lg">Title</th>
+              <th className="text-[#00ADB5] text-lg">Location.</th>
+              <th className="text-[#00ADB5] text-lg">Agent name</th>
+              <th className="text-[#00ADB5] text-lg">Agent email</th>
+              <th className="text-[#00ADB5] text-lg">Price range</th>
+              <th className="text-[#00ADB5] text-lg">Status</th>
             </tr>
           </thead>
           <tbody>
             {/* row 1 */}
             {properties.map((property) => (
-              <tr key={property._id} className="border border-[#59CE8F]">
-                <td>{property.title}</td>
-                <td>{property.location}</td>
-                <td>{property.agentName}</td>
-                <td>{property.agentEmail}</td>
-                <td>{property.priceRange}</td>
+              <tr key={property._id} className="border border-[#00ADB5]">
+                <td className="text-[#EEEEEE]">{property.title}</td>
+                <td className="text-[#EEEEEE]">{property.location}</td>
+                <td className="text-[#EEEEEE]">{property.agentName}</td>
+                <td className="text-[#EEEEEE]">{property.agentEmail}</td>
+                <td className="text-[#EEEEEE]">{property.priceRange}</td>
                 <td className="">
                     {
                         (property.status !== 'pending') && <p className={`${(property.status === 'verified') ? 'text-green-600' : 'text-red-600'}`}>{property.status}</p>
                     }
                   <button
                     onClick={() => handleUpdateStatusAccepted(property._id)}
-                    className={` underline hover:text-[#59CE8F]  mr-4 ${
+                    className={` underline hover:text-[#00ADB5] text-[#EEEEEE]  mr-4 ${
                       property.status === "verified" ||
                       property.status === "rejected"
                         ? `hidden`
@@ -99,7 +100,7 @@ const ManageProperties = () => {
 
                   <button
                     onClick={() => handleUpdateStatusRejected(property._id)}
-                    className={`underline hover:text-[#59CE8F] mt-3  ${
+                    className={`underline hover:text-[#00ADB5] text-[#EEEEEE] mt-3  ${
                       property.status === "verified" ||
                       property.status === "rejected"
                         ? `hidden`
@@ -111,7 +112,7 @@ const ManageProperties = () => {
                 </td>
               </tr>
             ))}
-            {/*onClick={() => handleUpdateStatus(job._id)}    className={`hover:text-[#59CE8F] mt-3 ${(job.status === 'in progress') ? `block` : `hidden`}`} */}
+            {/*onClick={() => handleUpdateStatus(job._id)}    className={`hover:text-[#00ADB5] mt-3 ${(job.status === 'in progress') ? `block` : `hidden`}`} */}
             {/* row 2 */}
           </tbody>
         </table>

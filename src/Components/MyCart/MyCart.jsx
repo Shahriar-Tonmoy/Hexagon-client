@@ -32,7 +32,7 @@ const MyCart = () => {
     <div className="min-h-screen">
         <ToastContainer></ToastContainer>
       <div className="mt-32 mb-32">
-        <h1 className="text-center text-5xl font-bold mb-16 text-[#1B9C85]">
+        <h1 className="text-center text-5xl font-bold mb-16 text-[#00ADB5]">
           Your Added Products
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 container mx-auto  gap-10 ">

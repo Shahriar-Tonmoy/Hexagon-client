@@ -31,7 +31,7 @@ const Home = () => {
             Real Estate Redefined!
             </h1>
             <p className="hidden md:block text-white text-xl text-left">
-            Welcome to <span className="text-[#1B9C85]">Hexagon</span>, your premier destination for seamless real estate transactions. Whether you're buying your dream home or selling a property, we provide a one-stop platform to streamline the process. Explore our extensive listings, connect with motivated buyers and sellers, and experience a new era of hassle-free real estate transactions. Your journey to homeownership and investment success begins here. Discover, transact, and thrive with <span className="text-[#1B9C85]">Hexagon</span>.
+            Welcome to <span className="text-[#00ADB5]">Hexagon</span>, your premier destination for seamless real estate transactions. Whether you're buying your dream home or selling a property, we provide a one-stop platform to streamline the process. Explore our extensive listings, connect with motivated buyers and sellers, and experience a new era of hassle-free real estate transactions. Your journey to homeownership and investment success begins here. Discover, transact, and thrive with <span className="text-[#00ADB5]">Hexagon</span>.
             </p>
           </div>
         </div>
@@ -48,7 +48,7 @@ const Home = () => {
         data-aos-offset="300"
         data-aos-easing="ease-in-sine"
       >
-        <h1 className="text-center text-5xl font-bold mb-16 text-[#1B9C85]">
+        <h1 className="text-center text-5xl font-bold mb-16 text-[#00ADB5]">
           Most Asked Questions
         </h1>
         <FAQ></FAQ>

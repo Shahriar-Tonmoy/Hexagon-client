@@ -89,18 +89,18 @@ const MakeOffer = () => {
     return (
         <div>
       <ToastContainer></ToastContainer>
-      <div className="hero min-h-screen bg-base-200">
+      <div className="hero min-h-screen">
         <div className="hero-content flex-col lg:flex-row-reverse w-full">
           <div className="text-center lg:text-left"></div>
-          <div className="card flex-shrink-0 w-full  shadow-2xl border border-[#1B9C85] bg-base-100 py-20 px-5">
-            <h1 className="text-[#1B9C85] text-center text-3xl font-bold">
+          <div className="card flex-shrink-0 w-full  shadow-2xl border border-[#00ADB5] bg-[#393E46] py-20 px-5">
+            <h1 className="text-[#00ADB5] text-center text-3xl font-bold">
               Make Your Offer
             </h1>
             <form className="card-body" onSubmit={handleNewOffer}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">Property title</span>
+                    <span className="label-text text-[#EEEEEE]">Property title</span>
                   </label>
                   <input
                     type="text"
@@ -114,7 +114,7 @@ const MakeOffer = () => {
                 </div>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">Property location</span>
+                    <span className="label-text text-[#EEEEEE]">Property location</span>
                   </label>
                   <input
                     type="text"
@@ -128,7 +128,7 @@ const MakeOffer = () => {
                 </div>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">Agent name</span>
+                    <span className="label-text text-[#EEEEEE]">Agent name</span>
                   </label>
                   <input
                     type="text"
@@ -142,7 +142,7 @@ const MakeOffer = () => {
                 </div>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">Offered Amount (ex: 50000)</span>
+                    <span className="label-text text-[#EEEEEE]">Offered Amount (ex: 50000)</span>
                   </label>
                   <input
                     type="text"
@@ -154,7 +154,7 @@ const MakeOffer = () => {
                 </div>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">Buyer Email</span>
+                    <span className="label-text text-[#EEEEEE]">Buyer Email</span>
                   </label>
                   <input
                     type="email"
@@ -168,7 +168,7 @@ const MakeOffer = () => {
                 </div>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">Buyer Name</span>
+                    <span className="label-text text-[#EEEEEE]">Buyer Name</span>
                   </label>
                   <input
                     type="text"
@@ -182,7 +182,7 @@ const MakeOffer = () => {
                 </div>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">Buying Date</span>
+                    <span className="label-text text-[#EEEEEE]">Buying Date</span>
                   </label>
                   <input
                     type="date"
@@ -194,7 +194,7 @@ const MakeOffer = () => {
                 </div>
               </div>
               <div className="form-control mt-6">
-                <button className="btn bg-opacity-0 border-[#1B9C85] hover:bg-opacity-0 hover:border-green-200 w-[20%] mx-auto">
+                <button className="btn bg-opacity-0 text-[#EEEEEE] border-[#00ADB5] hover:bg-opacity-0 hover:border-[#00ADB5] w-[20%] mx-auto">
                 Offer
                 </button>
               </div>

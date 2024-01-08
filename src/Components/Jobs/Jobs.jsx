@@ -19,11 +19,11 @@ const Jobs = () => {
   const graphDesignJobs = jobs.filter(job => job.category === 'Graphics design');
   return (
     <div className="mt-32 mb-32 container mx-auto">
-      <h1 className="text-center text-5xl font-bold mb-16 text-[#1B9C85]">
+      <h1 className="text-center text-5xl font-bold mb-16 text-[#00ADB5]">
         Jobs
       </h1>
       <Tabs className='mx-auto'>
-        <TabList className=' border-[#1B9C85] rounded-lg text-[#1B9C85]'>
+        <TabList className=' border-[#00ADB5] rounded-lg text-[#00ADB5]'>
           <Tab>Web development</Tab>
           <Tab>Digital marketing</Tab>
           <Tab>Graphics design</Tab>

@@ -54,12 +54,12 @@ const SignIn = () => {
   };
   return (
       
-      <div className="hero min-h-screen bg-base-200 bg-gradient-to-r from-[#1B9C85] to-green-400 ">  
+      <div className="hero min-h-screen bg-base-200 bg-gradient-to-r from-[#222831] to-[#393E46] ">  
       <ToastContainer></ToastContainer>
       <div className="hero-content flex-col lg:flex-row-reverse ">
         <div className="text-center lg:text-left"></div>
-        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl border border-[#1B9C85] bg-base-100 py-20 px-5">
-          <h1 className="text-[#1B9C85] text-center text-3xl font-bold">
+        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl border border-[#00ADB5] bg-[#EEEEEE] py-20 px-5">
+          <h1 className="text-[#00ADB5] text-center text-3xl font-bold">
             Sign in
           </h1>
           <form onSubmit={handleSignIn} className="card-body">
@@ -88,7 +88,7 @@ const SignIn = () => {
               />
             </div>
             <div className="form-control mt-6">
-              <button className="btn bg-opacity-0 border-[#1B9C85] hover:bg-opacity-0 hover:border-green-200">
+              <button className="btn bg-opacity-0 border-[#00ADB5] hover:bg-opacity-0 hover:border-[#00ADB5]">
                 Sign in
               </button>
             </div>
@@ -96,7 +96,7 @@ const SignIn = () => {
           <div className="text-center">
             <p>
               New here?{" "}
-              <Link className="text-[#1B9C85] underline" to="/registration">
+              <Link className="text-[#00ADB5] underline" to="/registration">
                 Sign Up
               </Link>
             </p>

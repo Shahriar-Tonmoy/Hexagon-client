@@ -4,8 +4,8 @@ const AgentDashboard = ({ currentUser }) => {
   return (
     <div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 container mx-auto mt-44">
-        <Link to={`/profile/${currentUser._id}`}>
-          <div className="card w-72 bg-base-100 shadow-xl image-full h-full">
+        <Link className="flex items-center lg:justify-end justify-center col-span-1 h-full" to={`/profile/${currentUser._id}`}>
+          <div className="border-2 border-[#00ADB5] card w-72 bg-[#393E46] shadow-xl image-full h-full">
             <figure className="rounded">
               <img src="https://i.ibb.co/jLKhF2r/pngwing-com.png" alt="Shoes" />
             </figure>
@@ -19,8 +19,8 @@ const AgentDashboard = ({ currentUser }) => {
         </Link>
         {
             !currentUser.fraud &&
-            <Link to={`/addProperty`}>
-            <div className="card w-72 bg-base-100 shadow-xl image-full ">
+            <Link className="flex items-center justify-center col-span-1 h-full" to={`/addProperty`}>
+            <div className="border-2 border-[#00ADB5] card w-72 bg-[#393E46] shadow-xl image-full ">
             <figure className="rounded">
               <img
                 src="https://i.ibb.co/3m7ttFq/pngwing-com-1.png"
@@ -38,8 +38,8 @@ const AgentDashboard = ({ currentUser }) => {
         </Link>
         }
 
-        <Link to='/myAddedProperties'> 
-        <div className="card w-72 bg-base-100 shadow-xl image-full ">
+        <Link className="flex items-center lg:justify-start justify-center col-span-1 h-full" to='/myAddedProperties'> 
+        <div className="border-2 border-[#00ADB5] card w-72 bg-[#393E46] shadow-xl image-full ">
           <figure className="rounded">
             <img src="https://i.ibb.co/3m7ttFq/pngwing-com-1.png" alt="Shoes" />
           </figure>
@@ -53,7 +53,8 @@ const AgentDashboard = ({ currentUser }) => {
         </Link>
 
         
-        <div className="card w-72 bg-base-100 shadow-xl image-full ">
+        <Link className="flex items-center lg:justify-end justify-center col-span-1 h-full">
+        <div className="border-2 border-[#00ADB5] card w-72 bg-[#393E46] shadow-xl image-full ">
           <figure className="rounded">
             <img src="https://i.ibb.co/3m7ttFq/pngwing-com-1.png" alt="Shoes" />
           </figure>
@@ -64,8 +65,9 @@ const AgentDashboard = ({ currentUser }) => {
             <p>See your sold properties</p>
           </div>
         </div>
-        <Link to={`/requestedProperties`}>
-        <div className="card w-72 bg-base-100 shadow-xl image-full ">
+        </Link>
+        <Link className="flex items-center justify-center col-span-1 h-full" to={`/requestedProperties`}>
+        <div className="border-2 border-[#00ADB5] card w-72 h-full bg-[#393E46] shadow-xl image-full ">
           <figure className="rounded">
             <img src="https://i.ibb.co/SVbpnYV/pngwing-com-2.png" alt="Shoes" />
           </figure>

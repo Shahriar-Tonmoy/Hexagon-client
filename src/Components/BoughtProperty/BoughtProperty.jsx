@@ -16,22 +16,22 @@ const BoughtProperty = ({property}) => {
       } = property;
   return (
     <div>
-      <div className="card lg:card-side bg-base-100 shadow-xl border-2 border-green-200 h-full">
+      <div className="card lg:card-side bg-[#393E46] shadow-xl border-2 border-[#00ADB5] h-full">
         <figure className="w-1/2">
           <img src={propertyImage} alt="Album" />
         </figure>
         <div className="card-body">
-          <h2 className="card-title text-[#1B9C85]">{Title}</h2>
-          <p>{Location}</p>
-          <p className="font-semibold">Agent - {AgentName}</p>
-          <p className="font-semibold">Status - {Status}</p>
-          <p className="font-semibold">
-          Offered Amount - <span className="text-[#1B9C85]">{OfferedAmount}</span>
+          <h2 className="card-title text-[#00ADB5]">{Title}</h2>
+          <p className="text-[#EEEEEE]">{Location}</p>
+          <p className="font-semibold text-[#EEEEEE]">Agent - {AgentName}</p>
+          <p className="font-semibold text-[#EEEEEE]">Status - {Status}</p>
+          <p className="font-semibold text-[#EEEEEE]">
+          Offered Amount - <span className="text-[#00ADB5]">{OfferedAmount}</span>
           </p>
           <div className="card-actions justify-start">
-            <Link to={`/update/${_id}`}>
+            <Link to={`/payment`}>
               <button
-                className={`btn bg-[#1B9C85] text-white hover:bg-green-500 ${
+                className={`btn bg-[#00ADB5] text-white hover:bg-green-500 ${
                   (Status === "pending" || Status === "rejected") ? "hidden" : "block"
                 }`}
               >

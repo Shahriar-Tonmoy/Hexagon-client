@@ -10,11 +10,11 @@ const Review = ({ review }) => {
             />
           </div>
         </div>
-        <div className="chat-header">
+        <div className="chat-header text-[#EEEEEE]">
           {review?.userEmail}
-          <time className="text-xs opacity-50">{review?.reviewTime}</time>
+          <time className="text-xs ml-1 opacity-50">{review?.reviewTime}</time>
         </div>
-        <div className="chat-bubble bg-[#1B9C85]">{review?.review}</div>
+        <div className="chat-bubble bg-[#00ADB5]">{review?.review}</div>
       </div>
     </div>
   );

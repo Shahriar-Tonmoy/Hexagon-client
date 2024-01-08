@@ -61,30 +61,31 @@ const AdvertiseProperties = () => {
 
   return (
     <div className="min-h-screen">
-      <h1 className="text-center text-5xl font-bold mb-16 text-[#59CE8F]">
+      <h1 className="text-center text-5xl font-bold mb-16 mt-16 text-[#00ADB5]">
         Advertise Properties
       </h1>
       <div className="overflow-x-auto container mx-auto">
-        <table className="table table-zebra">
+        <table className="table">
           {/* head */}
           <thead>
             <tr>
-              <th className="text-[#59CE8F] text-lg">Image</th>
-              <th className="text-[#59CE8F] text-lg">Title</th>
-              <th className="text-[#59CE8F] text-lg">Price Range</th>
-              <th className="text-[#59CE8F] text-lg">Agent Name</th>
+              <th className="text-[#00ADB5] text-lg">Image</th>
+              <th className="text-[#00ADB5] text-lg">Title</th>
+              <th className="text-[#00ADB5] text-lg">Price Range</th>
+              <th className="text-[#00ADB5] text-lg">Agent Name</th>
+              <th className="text-[#00ADB5] text-lg">Action</th>
             </tr>
           </thead>
           <tbody>
             {/* row 1 */}
             {verifiedProperties.map((property) => (
-              <tr key={property._id} className="border border-[#59CE8F]">
+              <tr key={property._id} className="border border-[#00ADB5]">
                 <td>
                   <img className="h-20 w-20" src={property.image} alt="" />
                 </td>
-                <td>{property.title}</td>
-                <td>{property.priceRange}</td>
-                <td>{property.agentName}</td>
+                <td className="text-[#EEEEEE]">{property.title}</td>
+                <td className="text-[#EEEEEE]">{property.priceRange}</td>
+                <td className="text-[#EEEEEE]">{property.agentName}</td>
                 <td className="">
                   {
                     <div>
@@ -92,7 +93,7 @@ const AdvertiseProperties = () => {
                         onClick={() => {
                             handleUpdateAdvertiseYes(property._id);
                         }}
-                        className={` underline hover:text-[#59CE8F]  mr-4 ${property.advertise === 'yes' ? 'hidden' : 'block'}`}
+                        className={` underline hover:text-[#00ADB5] text-[#EEEEEE]  mr-4 ${property.advertise === 'yes' ? 'hidden' : 'block'}`}
                       >
                         Advertise
                       </button>
@@ -101,7 +102,7 @@ const AdvertiseProperties = () => {
                         onClick={() => {
                             handleUpdateAdvertiseNo(property._id);
                         }}
-                        className={`underline hover:text-[#59CE8F] mt-3 ${property.advertise === 'no' ? 'hidden' : 'block'}`}
+                        className={`underline hover:text-[#00ADB5] text-[#EEEEEE] mt-3 ${property.advertise === 'no' ? 'hidden' : 'block'}`}
                       >
                         Remove Advertise
                       </button>
@@ -110,7 +111,7 @@ const AdvertiseProperties = () => {
                 </td>
               </tr>
             ))}
-            {/*onClick={() => handleUpdateStatus(job._id)}    className={`hover:text-[#59CE8F] mt-3 ${(job.status === 'in progress') ? `block` : `hidden`}`} */}
+            {/*onClick={() => handleUpdateStatus(job._id)}    className={`hover:text-[#00ADB5] mt-3 ${(job.status === 'in progress') ? `block` : `hidden`}`} */}
             {/* row 2 */}
           </tbody>
         </table>

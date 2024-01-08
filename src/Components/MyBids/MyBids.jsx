@@ -42,7 +42,7 @@ const MyBids = () => {
 
   return (
     <div className="min-h-screen">
-      <h1 className="text-center text-5xl font-bold mb-16 text-[#1B9C85]">
+      <h1 className="text-center text-5xl font-bold mb-16 text-[#00ADB5]">
         My Bids
       </h1>
       <div className="overflow-x-auto container mx-auto">
@@ -50,22 +50,22 @@ const MyBids = () => {
           {/* head */}
           <thead>
             <tr>
-              <th className="text-[#1B9C85] text-lg">Job Title</th>
-              <th className="text-[#1B9C85] text-lg">Email</th>
-              <th className="text-[#1B9C85] text-lg">Deadline</th>
-              <th className="text-[#1B9C85] text-lg">Status</th>
+              <th className="text-[#00ADB5] text-lg">Job Title</th>
+              <th className="text-[#00ADB5] text-lg">Email</th>
+              <th className="text-[#00ADB5] text-lg">Deadline</th>
+              <th className="text-[#00ADB5] text-lg">Status</th>
             </tr>
           </thead>
           <tbody>
             {/* row 1 */}
             {
                 bidJobs.map(job => (
-                <tr key={job._id} className="border border-[#1B9C85]">
+                <tr key={job._id} className="border border-[#00ADB5]">
                     <td>{job.title}</td>
                     <td>{job.buyerEmail}</td>
                     <td>{job.deadline}</td>
                     <td>{job.status}</td>
-                    <button onClick={() => handleUpdateStatus(job._id)} className={`underline hover:text-[#1B9C85] mt-3 ${(job.status === 'in progress') ? `block` : `hidden`}`}>Complete</button>
+                    <button onClick={() => handleUpdateStatus(job._id)} className={`underline hover:text-[#00ADB5] mt-3 ${(job.status === 'in progress') ? `block` : `hidden`}`}>Complete</button>
                   </tr>))
             }
             {/* row 2 */}

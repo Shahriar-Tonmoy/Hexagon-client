@@ -13,7 +13,7 @@ const Job = ({ job }) => {
   } = job;
   return (
     <div className="mx-auto">
-      <div className="card w-96 bg-base-100 shadow-xl border border-[#1B9C85] flex flex-col h-full pb-5">
+      <div className="card w-96 bg-[#393E46] shadow-xl border border-[#00ADB5] flex flex-col h-full pb-5">
         <figure className="px-10 pt-10">
           <img
             src={imageURL}
@@ -22,18 +22,18 @@ const Job = ({ job }) => {
           />
         </figure>
         <div className="card-body items-center text-center">
-          <h2 className="card-title text-[#1B9C85]">{title}</h2>
+          <h2 className="card-title text-[#00ADB5]">{title}</h2>
           <p>{description}</p>
           <div className="flex justify-between w-full">
-            <p className="text-[#1B9C85]">Dead line: {deadline}</p>
-            <p className="text-[#1B9C85]">
+            <p className="text-[#00ADB5]">Dead line: {deadline}</p>
+            <p className="text-[#00ADB5]">
               {minimumPrice}-{maximumPrice}
             </p>
           </div>
         </div>
         <Link to={`/details/${_id}`}>
           <div className="card-actions ">
-            <button className="btn border border-[#1B9C85] hover:bg-[#1B9C85] text-white mx-auto">
+            <button className="btn border border-[#00ADB5] hover:bg-[#00ADB5] text-white mx-auto">
               Bid now
             </button>
           </div>

@@ -113,47 +113,48 @@ const ManageUsers = () => {
 
     return (
         <div className="min-h-screen">
-      <h1 className="text-center text-5xl font-bold mb-16 text-[#59CE8F]">
+      <h1 className="text-center text-5xl font-bold mb-16 mt-16 text-[#00ADB5]">
         Manage Users
       </h1>
       <div className="overflow-x-auto container mx-auto">
-        <table className="table table-zebra">
+        <table className="table">
           {/* head */}
           <thead>
             <tr>
-              <th className="text-[#59CE8F] text-lg">User Name</th>
-              <th className="text-[#59CE8F] text-lg">User Email</th>
-              <th className="text-[#59CE8F] text-lg">Role</th>
+              <th className="text-[#00ADB5] text-lg">User Name</th>
+              <th className="text-[#00ADB5] text-lg">User Email</th>
+              <th className="text-[#00ADB5] text-lg">Role</th>
+              <th className="text-[#00ADB5] text-lg text-start">Actions</th>
               
             </tr>
           </thead>
           <tbody>
             {/* row 1 */}
             {users.map((user) => (
-              <tr key={user._id} className="border border-[#59CE8F]">
-                <td>{user.name}</td>
-                <td>{user.email}</td>
-                <td>{user.role}</td>
+              <tr key={user._id} className="border border-[#00ADB5]">
+                <td className="text-[#EEEEEE]">{user.name}</td>
+                <td className="text-[#EEEEEE]" >{user.email}</td>
+                <td className="text-[#EEEEEE]">{user.role}</td>
                 <td className="">
                     {
                         (user.fraud === 'Fraud') ? <p className="text-red-800">{user.fraud}</p> :
                         <div className=" w-max">
                   <button
                     onClick={()=>handleUpdateRoleAdmin(user._id)}
-                    className={` underline hover:text-[#59CE8F]  mr-4 `}
+                    className={` underline hover:text-[#00ADB5] text-[#EEEEEE]  mr-4 `}
                   >
                     Make Admin
                   </button>
 
                   <button
                     onClick={() => handleUpdateRoleAgent(user._id)}
-                    className={`underline hover:text-[#59CE8F] mt-3 mr-4`}
+                    className={`underline hover:text-[#00ADB5] text-[#EEEEEE]  mt-3 mr-4`}
                   >
                     Make agent
                   </button>
                   <button
                   onClick={() => {handleUpdateFraud(user._id)}}
-                    className={`underline hover:text-[#59CE8F] mt-3 mr-4 ${user.role !== 'agent' && 'hidden'}`}
+                    className={`underline hover:text-[#00ADB5] text-[#EEEEEE]  mt-3 mr-4 ${user.role !== 'agent' && 'hidden'}`}
                   >
                     Mark as fraud
                   </button>
@@ -169,7 +170,7 @@ const ManageUsers = () => {
                 </td>
               </tr>
             ))}
-            {/*onClick={() => handleUpdateStatus(job._id)}    className={`hover:text-[#59CE8F] mt-3 ${(job.status === 'in progress') ? `block` : `hidden`}`} */}
+            {/*onClick={() => handleUpdateStatus(job._id)}    className={`hover:text-[#00ADB5] mt-3 ${(job.status === 'in progress') ? `block` : `hidden`}`} */}
             {/* row 2 */}
           </tbody>
         </table>

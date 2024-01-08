@@ -25,7 +25,7 @@ const LatestUserReview = () => {
   return (
     <div className="">
       <ToastContainer></ToastContainer>
-      <h1 className="text-center text-5xl font-bold mb-16 mt-16 text-[#59CE8F]">
+      <h1 className="text-center text-5xl font-bold mb-16 mt-16 text-[#00ADB5]">
         Latest Reviews
       </h1>
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 container mx-auto mt-10 mb-16">

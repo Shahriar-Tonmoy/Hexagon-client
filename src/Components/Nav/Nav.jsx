@@ -7,21 +7,21 @@ const Nav = ({ handleToggle }) => {
   console.log(user);
   const navLinks = (
     <>
-      <div className="flex gap-8">
-        <NavLink className="text-lg font-semibold" to="/">
+      <div className="flex flex-col lg:flex-row gap-4 md:gap-8">
+        <NavLink className="text-sm lg:text-lg font-semibold" to="/">
           Home
         </NavLink>
 
-        <NavLink className="text-lg font-semibold" to="/allProperties">
+        <NavLink className="text-sm lg:text-lg font-semibold" to="/allProperties">
           All properties
         </NavLink>
-        <NavLink className="text-lg font-semibold" to="/dashboard">
+        <NavLink className="text-sm lg:text-lg font-semibold" to="/dashboard">
         Dashboard
         </NavLink>
         
 
         {!user && (
-          <NavLink className="text-lg font-semibold" to="/SignIn">
+          <NavLink className="text-sm lg:text-lg font-semibold" to="/SignIn">
             Sign in
           </NavLink>
         )}
@@ -34,8 +34,8 @@ const Nav = ({ handleToggle }) => {
   };
 
   return (
-    <div className="navbar container mx-auto bg-[#1B9C85] opacity-80 rounded-lg  ">
-      <div className="navbar-start">
+    <div className="navbar  top-0 z-10 mx-auto bg-[#00ADB5] opacity-80 rounded-lg  ">
+      <div className="navbar-start flex justify-center">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
@@ -55,7 +55,7 @@ const Nav = ({ handleToggle }) => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 p-2 shadow  bg-[#00ADB5] bg-opacity-100  rounded-box w-52"
           >
             {navLinks}
           </ul>
@@ -63,20 +63,19 @@ const Nav = ({ handleToggle }) => {
         <div className="flex justify-center items-center gap-3">
           <img src="https://i.ibb.co/C29NwnH/smooth-color-gradient-hexagon-icon-logo-vector-21165494.jpg" className="h-8" alt="" />
           <p className="text-3xl font-bold text-white">HEXAGON</p>
-          {/* <p className="text-lg text-[#1B9C85]">Next Wheels</p> */}
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
-      <div className="navbar-end">
+      <div className="navbar-end flex justify-center">
         
         {user && (
           <div className="flex flex-col md:flex-row gap-7 items-center justify-center">
             
             <div className="flex flex-col items-center mr-5">
             <img
-              className="rounded-full border-2 border-[#1B9C85] h-10 w-10"
+              className="rounded-full border-2 border-[#00ADB5] h-10 w-10"
               src={user.photoURL}
               alt=""
             />

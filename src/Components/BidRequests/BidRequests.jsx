@@ -62,7 +62,7 @@ const BidRequests = () => {
 
     return (
         <div className="min-h-screen">
-      <h1 className="text-center text-5xl font-bold mb-16 text-[#1B9C85]">
+      <h1 className="text-center text-5xl font-bold mb-16 text-[#00ADB5]">
         My Bids
       </h1>
       <div className="overflow-x-auto container mx-auto">
@@ -70,31 +70,31 @@ const BidRequests = () => {
           {/* head */}
           <thead>
             <tr>
-              <th className="text-[#1B9C85] text-lg">Job Title</th>
-              <th className="text-[#1B9C85] text-lg">Email</th>
-              <th className="text-[#1B9C85] text-lg">Deadline</th>
-              <th className="text-[#1B9C85] text-lg">Price</th>
-              <th className="text-[#1B9C85] text-lg">Status</th>
+              <th className="text-[#00ADB5] text-lg">Job Title</th>
+              <th className="text-[#00ADB5] text-lg">Email</th>
+              <th className="text-[#00ADB5] text-lg">Deadline</th>
+              <th className="text-[#00ADB5] text-lg">Price</th>
+              <th className="text-[#00ADB5] text-lg">Status</th>
             </tr>
           </thead>
           <tbody>
             {/* row 1 */}
             {
                 bidJobs.map(job => (
-                <tr key={job._id} className="border border-[#1B9C85]">
+                <tr key={job._id} className="border border-[#00ADB5]">
                     <td>{job.title}</td>
                     <td>{job.email}</td>
                     <td>{job.deadline}</td>
                     <td>{job.price}</td>
                     <td>{job.status}</td>
-                    <td className=""><button onClick={() => handleUpdateStatusAccepted(job._id)} className={` underline hover:text-[#1B9C85]  mr-4 ${(job.status === 'in progress' || job.status === 'complete' || job.status === 'rejected') ? `hidden` : `block`}`}>Accept</button>
+                    <td className=""><button onClick={() => handleUpdateStatusAccepted(job._id)} className={` underline hover:text-[#00ADB5]  mr-4 ${(job.status === 'in progress' || job.status === 'complete' || job.status === 'rejected') ? `hidden` : `block`}`}>Accept</button>
 
-                    <button onClick={() => handleUpdateStatusRejected(job._id)} className={`underline hover:text-[#1B9C85] mt-3  ${(job.status === 'in progress' || job.status === 'complete' || job.status === 'rejected') ? `hidden` : `block`}`}>Reject</button>                   
+                    <button onClick={() => handleUpdateStatusRejected(job._id)} className={`underline hover:text-[#00ADB5] mt-3  ${(job.status === 'in progress' || job.status === 'complete' || job.status === 'rejected') ? `hidden` : `block`}`}>Reject</button>                   
                     <progress className={`progress w-56 mt-4 ${(job.status === 'in progress') ? `block` : `hidden`}`} value="40" max="100"></progress></td>
                     
                   </tr>))
             }
-            {/*onClick={() => handleUpdateStatus(job._id)}    className={`hover:text-[#1B9C85] mt-3 ${(job.status === 'in progress') ? `block` : `hidden`}`} */}
+            {/*onClick={() => handleUpdateStatus(job._id)}    className={`hover:text-[#00ADB5] mt-3 ${(job.status === 'in progress') ? `block` : `hidden`}`} */}
             {/* row 2 */}
           </tbody>
         </table>

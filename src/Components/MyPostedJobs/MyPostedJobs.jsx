@@ -52,7 +52,7 @@ const MyPostedJobs = () => {
   return (
     <div className="min-h-screen">
       <ToastContainer></ToastContainer>
-      <h1 className="text-center text-5xl font-bold mb-16 text-[#1B9C85]">
+      <h1 className="text-center text-5xl font-bold mb-16 text-[#00ADB5]">
         My Posted Jobs
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 container mx-auto mt-10">

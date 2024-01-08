@@ -49,7 +49,7 @@ const MyAddedProperties = () => {
   return (
     <div className="min-h-screen">
       <ToastContainer></ToastContainer>
-      <h1 className="text-center text-5xl font-bold mb-16 mt-16 text-[#59CE8F]">
+      <h1 className="text-center text-5xl font-bold mb-16 mt-16 text-[#00ADB5]">
         My Added Properties
       </h1>
       <div className="grid grid-cols-2 gap-10 container mx-auto mt-10 mb-16">
